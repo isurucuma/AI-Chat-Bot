@@ -43,16 +43,60 @@ function UserInputField({}: Props) {
     setChatHistory((chatHistory) => [...chatHistory, serverMessage]);
   };
 
+  // async function sendUserMessage(message: string): Promise<string> {
+  //   // create a promise that resolves after 1 second
+  //   const promise = new Promise<string>((resolve, reject) => {
+  //     setTimeout(() => {
+  //       // set timeout to simulate a response from the server
+  //       resolve("AI response");
+  //     }, 2000);
+  //   });
+  //   return promise;
+  // }
+
+  // async function sendUserMessage(message: string): Promise<string> {
+  //   const promise = new Promise<string>((resolve, reject) => {
+  //     fetch("http://localhost:5000/chatbot", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ message: message }),
+  //     })
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         resolve(data.message);
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error:", error);
+  //       });
+  //   });
+  //   return promise;
+  // }
+
+// @app.get('/conversation')
+// async def conversation(message: str):
+// call https://fad1-34-73-113-36.ngrok.io/conversation?message= with the message and return response
+
   async function sendUserMessage(message: string): Promise<string> {
-    // create a promise that resolves after 1 second
     const promise = new Promise<string>((resolve, reject) => {
-      setTimeout(() => {
-        // set timeout to simulate a response from the server
-        resolve("AI response");
-      }, 2000);
+      fetch("https://ce43-34-73-113-36.ngrok.io/conversation?message=" + message, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          resolve(data.message);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     });
     return promise;
   }
+
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(event.target.value);
