@@ -1,22 +1,58 @@
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 import { RiAttachmentLine, RiEmotionLine } from "react-icons/ri";
 import { IoSend } from "react-icons/io5";
 import EmojiPicker from "./EmojiPicker";
+import { IMessage } from "../../common-types/types";
+import { ChatContext } from "./ChatUI";
 
 type Props = {};
 
 function UserInputField({}: Props) {
+  const { chatHistory, setChatHistory } = useContext(ChatContext);
   const [message, setMessage] = React.useState("");
   const [showEmojiPicker, setShowEmojiPicker] = React.useState(false);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // TODO: handle send message
     console.log(`Sending message: ${message}`);
+    // create a new IMessage from the message
+
+    let newMessage: IMessage = {
+      id: chatHistory.length,
+      isFromUser: true,
+      content: message,
+      done: false,
+    };
+
+    // add it to the chatHistory
+    setChatHistory((chatHistory) => [...chatHistory, newMessage]);
     setMessage("");
+
+    // TODO: handle response from the server
+    let serverResponse = await sendUserMessage(message);
+    // create IMessage from the response
+    let serverMessage: IMessage = {
+      id: chatHistory.length,
+      isFromUser: false,
+      content: serverResponse,
+      done: true,
+    };
+    setChatHistory((chatHistory) => [...chatHistory, serverMessage]);
   };
+
+  async function sendUserMessage(message: string): Promise<string> {
+    // create a promise that resolves after 1 second
+    const promise = new Promise<string>((resolve, reject) => {
+      setTimeout(() => {
+        // set timeout to simulate a response from the server
+        resolve("AI response");
+      }, 2000);
+    });
+    return promise;
+  }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(event.target.value);
@@ -50,12 +86,14 @@ function UserInputField({}: Props) {
         </div>
       </form>
       <EmojiPicker
-        onSelect={(emoji: string) => {
+        onEmojiSelect={(emoji: string) => {
           setMessage(message + emoji);
         }}
         className={`absolute bottom-16 right-4 h-96 overflow-scroll transition-all ease-in duration-300 transform ${
           showEmojiPicker ? "" : "hidden"
         }`}
+        showEmojiPicker={showEmojiPicker}
+        setShowEmojiPicker={setShowEmojiPicker}
       />
     </div>
   );

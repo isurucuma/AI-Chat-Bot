@@ -3,11 +3,10 @@ ChatUI:
     - creating the components @done
     - design the components @done 
     - add useContext for messages @done
-    - make the send button functional:
-        - append the messages to the message array
-        - create a handler function to send the message:
-            - combine system message + user message + chat history
-            - send the combined message to the backend
-            - create a new bot message and append it to the message array
-    - make the emogi section responsive
+    - make the send button functional: @done
+        - append the messages to the message array @done
+        - create a handler function to send the message: @done
+            - send message to the backend @done
+            - create a new bot message and append it to the message array @done
+    - make the emogi section responsive @done
 

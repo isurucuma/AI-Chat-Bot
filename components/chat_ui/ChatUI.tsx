@@ -4,7 +4,8 @@ import ChatHeader from "./ChatHeader";
 import MessageContainer from "./MessageContainer";
 import UserInputField from "./UserInputField";
 import { createContext, useState } from "react";
-import { IMessage } from "./types";
+import { IMessage } from "../../common-types/types";
+import { dummyMessages } from "@/common-types/dummy-data";
 
 type Props = {
   className?: string;
@@ -33,7 +34,7 @@ export const ChatContext = createContext<ChatContextType>({
 
 function ChatUI({ className }: Props) {
   const [systemMessage, setSystemMessage] = useState("");
-  const [chatHistory, setChatHistory] = useState<IMessage[]>([]);
+  const [chatHistory, setChatHistory] = useState<IMessage[]>(dummyMessages); // TODO: remove dummy messages in production
   const [userMessage, setUserMessage] = useState("");
   return (
     <ChatContext.Provider

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { IMessage } from "./types";
+import { IMessage } from "../../common-types/types";
 
 function Message({
   id = 0,
