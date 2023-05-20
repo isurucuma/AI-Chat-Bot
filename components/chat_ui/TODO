@@ -9,4 +9,7 @@ ChatUI:
             - send message to the backend @done
             - create a new bot message and append it to the message array @done
     - make the emogi section responsive @done
+    - make the bot responsive for different screen sizes
+    - add some animations like typing animation for the bot
+    - add theme selection for the bot as dark or light for the first later add more
 
