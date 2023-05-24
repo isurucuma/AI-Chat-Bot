@@ -48,13 +48,32 @@ function UserInputField({ className }: Props) {
     setIsBotTyping(false);
   };
 
+  // async function sendUserMessage(message: string): Promise<string> {
+  //   // create a promise that resolves after 1 second
+  //   const promise = new Promise<string>((resolve, reject) => {
+  //     setTimeout(() => {
+  //       // set timeout to simulate a response from the server
+  //       resolve("AI response");
+  //     }, 2000);
+  //   });
+  //   return promise;
+  // }
+
   async function sendUserMessage(message: string): Promise<string> {
-    // create a promise that resolves after 1 second
     const promise = new Promise<string>((resolve, reject) => {
-      setTimeout(() => {
-        // set timeout to simulate a response from the server
-        resolve("AI response");
-      }, 2000);
+      fetch("https://11b4-34-86-251-65.ngrok.io/conversation?message=" + message, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          resolve(data.message);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     });
     return promise;
   }
