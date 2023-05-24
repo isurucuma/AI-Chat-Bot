@@ -6,13 +6,17 @@ import { IoSend } from "react-icons/io5";
 import EmojiPicker from "./EmojiPicker";
 import { IMessage } from "../../common-types/types";
 import { ChatContext } from "./ChatUI";
+import { motion } from "framer-motion";
 
-type Props = {};
+type Props = {
+  className?: string;
+};
 
-function UserInputField({}: Props) {
+function UserInputField({ className }: Props) {
   const { chatHistory, setChatHistory } = useContext(ChatContext);
   const [message, setMessage] = React.useState("");
   const [showEmojiPicker, setShowEmojiPicker] = React.useState(false);
+  const [isBotTyping, setIsBotTyping] = React.useState(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -30,7 +34,7 @@ function UserInputField({}: Props) {
     // add it to the chatHistory
     setChatHistory((chatHistory) => [...chatHistory, newMessage]);
     setMessage("");
-
+    setIsBotTyping(true);
     // TODO: handle response from the server
     let serverResponse = await sendUserMessage(message);
     // create IMessage from the response
@@ -41,6 +45,7 @@ function UserInputField({}: Props) {
       done: true,
     };
     setChatHistory((chatHistory) => [...chatHistory, serverMessage]);
+    setIsBotTyping(false);
   };
 
   async function sendUserMessage(message: string): Promise<string> {
@@ -58,13 +63,37 @@ function UserInputField({}: Props) {
     setMessage(event.target.value);
   };
   return (
-    <div className="mt-1 row-span-2 bg-slate-100 w-full relative hover:bg-slate-200 transition ease-out duration-400 border border-none rounded-2xl">
-      <form onSubmit={handleSubmit} className="flex p-4">
+    <div
+      className={`mt-1 bg-slate-100 w-full relative hover:bg-slate-200 transition ease-out duration-400 border border-none rounded-2xl ${className}`}
+    >
+      <form onSubmit={handleSubmit} className="flex p-4 relative">
+        {isBotTyping ? (
+          <div className="flex justify-center absolute top-8 left-6">
+            <motion.span
+              className="inline-block bg-slate-400 border rounded-full w-2 h-2 mx-0.5"
+              animate={{ y: [6, 0, -6, 0, 6] }}
+              transition={{ duration: 0.6, repeat: Infinity }}
+            ></motion.span>
+            <motion.span
+              className="inline-block bg-slate-400 border rounded-full w-2 h-2 mx-0.5"
+              animate={{ y: [0, 6, 0, -6, 0] }}
+              transition={{ duration: 0.6, repeat: Infinity }}
+            ></motion.span>
+            <motion.span
+              className="inline-block bg-slate-400 border rounded-full w-2 h-2 mx-0.5"
+              animate={{ y: [-6, 0, 6, 0, -6] }}
+              transition={{ duration: 0.6, repeat: Infinity }}
+            ></motion.span>
+          </div>
+        ) : (
+          <></>
+        )}
         <input
           type="text"
-          placeholder="Type a message..."
+          placeholder={!isBotTyping ? "Type a message..." : ""}
           value={message}
           onChange={handleInputChange}
+          disabled={isBotTyping}
           className="w-full py-2 px-4 rounded-full bg-gray-100 text-gray-800 outline-none focus:ring-2 focus:ring-blue-300 transition ease-out duration-400"
         />
         <div className="flex ml-4">

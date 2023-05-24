@@ -2,11 +2,15 @@ import Image from "next/image";
 import React from "react";
 import avatar from "../../public/avatar.png";
 import { IoIosArrowDown } from "react-icons/Io";
-type Props = {};
+type Props = {
+  className?: string;
+};
 
-function ChatHeader({}: Props) {
+function ChatHeader({ className }: Props) {
   return (
-    <div className="grid grid-cols-4 row-span-1 pl-4 relative">
+    <div
+      className={`grid grid-cols-4 row-span-1 pl-4 relative max-h-28 ${className}`}
+    >
       <div className="h-full col-span-1 flex flex-col justify-center">
         <Image src={avatar} alt="avatar" style={{ borderRadius: "50%" }} />
       </div>

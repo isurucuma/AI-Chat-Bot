@@ -48,11 +48,11 @@ function ChatUI({ className }: Props) {
       }}
     >
       <section
-        className={`grid grid-rows-10 lg:h-[650px] lg:w-[450px] border p-4 mx-4 my-4 rounded-2xl shadow-2xl overflow-hidden ${className}`}
+        className={`flex flex-col lg:h-[650px] lg:w-[450px] border p-4 mx-4 my-4 rounded-2xl shadow-2xl overflow-hidden ${className}`}
       >
-        <ChatHeader />
-        <MessageContainer />
-        <UserInputField />
+        <ChatHeader className="flex-initial" />
+        <MessageContainer className="grow" />
+        <UserInputField className="flex-initial" />
       </section>
     </ChatContext.Provider>
   );
