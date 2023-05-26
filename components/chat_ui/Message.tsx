@@ -18,7 +18,7 @@ function Message({
   return (
     <div className={`flex ${isFromUser ? "justify-end" : "justify-start"}`}>
       <div className={`${messageStyle} relative`}>
-        <p className="px-4 py-2">{content}</p>
+        <p className="px-4 py-2 whitespace-pre-line">{content}</p>
         <div
           className={`h-1 w-1 rounded-full absolute ${dotStyle} ${
             isFromUser ? " bottom-1 right-1" : "top-1 left-1"

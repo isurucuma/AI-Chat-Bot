@@ -48,37 +48,50 @@ function UserInputField({ className }: Props) {
     setIsBotTyping(false);
   };
 
-  // async function sendUserMessage(message: string): Promise<string> {
-  //   // create a promise that resolves after 1 second
-  //   const promise = new Promise<string>((resolve, reject) => {
-  //     setTimeout(() => {
-  //       // set timeout to simulate a response from the server
-  //       resolve("AI response");
-  //     }, 2000);
-  //   });
-  //   return promise;
-  // }
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.key === "Enter" && event.shiftKey) {
+      event.preventDefault();
+      setMessage((prevValue) => prevValue + "\n");
+    } else if (event.key === "Enter") {
+      event.preventDefault();
+      handleSubmit(event as any);
+    }
+  };
 
   async function sendUserMessage(message: string): Promise<string> {
+    // create a promise that resolves after 1 second
     const promise = new Promise<string>((resolve, reject) => {
-      fetch("https://11b4-34-86-251-65.ngrok.io/conversation?message=" + message, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          resolve(data.message);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
+      setTimeout(() => {
+        // set timeout to simulate a response from the server
+        resolve("AI response");
+      }, 2000);
     });
     return promise;
   }
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  // async function sendUserMessage(message: string): Promise<string> {
+  //   const promise = new Promise<string>((resolve, reject) => {
+  //     fetch(
+  //       "https://7dfe-35-231-31-81.ngrok.io/conversation?message=" + message,
+  //       {
+  //         method: "GET",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //       }
+  //     )
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         resolve(data.message);
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error:", error);
+  //       });
+  //   });
+  //   return promise;
+  // }
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(event.target.value);
   };
   return (
@@ -87,7 +100,7 @@ function UserInputField({ className }: Props) {
     >
       <form onSubmit={handleSubmit} className="flex p-4 relative">
         {isBotTyping ? (
-          <div className="flex justify-center absolute top-8 left-6">
+          <div className="flex justify-center absolute top-10 left-8">
             <motion.span
               className="inline-block bg-slate-400 border rounded-full w-2 h-2 mx-0.5"
               animate={{ y: [6, 0, -6, 0, 6] }}
@@ -107,13 +120,13 @@ function UserInputField({ className }: Props) {
         ) : (
           <></>
         )}
-        <input
-          type="text"
+        <textarea
           placeholder={!isBotTyping ? "Type a message..." : ""}
           value={message}
           onChange={handleInputChange}
           disabled={isBotTyping}
-          className="w-full py-2 px-4 rounded-full bg-gray-100 text-gray-800 outline-none focus:ring-2 focus:ring-blue-300 transition ease-out duration-400"
+          className="w-full py-2 px-4 rounded-full bg-gray-100 text-gray-800 outline-none focus:ring-2 focus:ring-blue-300 transition ease-out duration-400 resize-none"
+          onKeyDown={handleKeyDown}
         />
         <div className="flex ml-4">
           <button type="button" className="mr-2">
