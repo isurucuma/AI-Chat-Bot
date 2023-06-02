@@ -1,9 +1,12 @@
 "use client";
+import Button from "@/components/micro_items/Button";
 import React, { useState } from "react";
 
-type Props = {};
+type Props = {
+  className?: string;
+};
 
-function DocumentUpload({}: Props) {
+function DocumentUpload({ className }: Props) {
   const [isDragging, setIsDragging] = useState(false);
   const [file, setFile] = useState<File>();
 
@@ -34,9 +37,9 @@ function DocumentUpload({}: Props) {
   };
 
   return (
-    <div className="flex flex-row">
+    <div className={`flex flex-row items-center ${className}`}>
       <div
-        className={`border-2 border-dashed rounded-lg p-4 ${
+        className={`flex-1 border-2 border-dashed rounded-lg p-4 h-32 flex items-center justify-center ${
           isDragging ? "bg-gray-200" : "bg-white"
         }`}
         onDragEnter={(event) => handleDragEnter(event)}
@@ -55,13 +58,14 @@ function DocumentUpload({}: Props) {
           </>
         )}
       </div>
-      <button
-        className="bg-blue-500 text-white px-4 rounded"
-        onClick={handleConfirmUpload}
-        disabled={!file}
-      >
-        Confirm Upload
-      </button>
+      <div className="flex-1 flex pl-8 h-fit">
+        <Button
+          className="bg-blue-500 text-white px-4 rounded py-4"
+          onClick={handleConfirmUpload}
+          disabled={!file}
+          name="Confirm Upload"
+        />
+      </div>
     </div>
   );
 }
