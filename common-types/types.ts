@@ -6,3 +6,9 @@ export interface IMessage {
     isFromUser?: boolean;
     done?: boolean;
 }
+
+export enum NavSelection {
+    knowledgeBase,
+    activity,
+    keys,
+}
