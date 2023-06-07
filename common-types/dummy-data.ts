@@ -23,22 +23,22 @@ export const dummyMessages: IMessage[] = [
   ];
 
   export const dummyUploadedFiles: TUploadedFile[] = [
-    {
-      fileName: "order.pdf",
-      size: "1.2MB",
-      uploadedAt: "2021-01-01",
-      uploadedBy: "John Doe",
-    },
-    {
-      fileName: "invoice.pdf",
-      size: "0.5MB",
-      uploadedAt: "2021-01-02",
-      uploadedBy: "John Doe",
-    },
-    {
-      fileName: "receipt.pdf",
-      size: "0.8MB",
-      uploadedAt: "2021-01-03",
-      uploadedBy: "John Doe",
-    },
+    // {
+    //   fileName: "order.pdf",
+    //   size: "1.2MB",
+    //   uploadedAt: "2021-01-01",
+    //   uploadedBy: "John Doe",
+    // },
+    // {
+    //   fileName: "invoice.pdf",
+    //   size: "0.5MB",
+    //   uploadedAt: "2021-01-02",
+    //   uploadedBy: "John Doe",
+    // },
+    // {
+    //   fileName: "receipt.pdf",
+    //   size: "0.8MB",
+    //   uploadedAt: "2021-01-03",
+    //   uploadedBy: "John Doe",
+    // },
   ];
