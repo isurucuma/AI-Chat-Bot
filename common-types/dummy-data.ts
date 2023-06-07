@@ -7,7 +7,7 @@ export const dummyMessages: IMessage[] = [
     // { isFromUser: true, content: "12345" },
     // {
     //   isFromUser: false,
-    //   content: "Thank you, let me check on that.",
+    //   content: "okay, let me check on that.",
     //   done: false,
     // },
     // {
