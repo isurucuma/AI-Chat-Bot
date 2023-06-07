@@ -1,7 +1,5 @@
-"use client";
 import React from "react";
 import { IconType } from "react-icons";
-import { BsDatabaseCheck } from "react-icons/bs";
 
 type Props = {
   name: string;

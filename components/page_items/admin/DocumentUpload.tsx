@@ -1,12 +1,15 @@
 "use client";
+import React, { useState, useContext } from "react";
 import Button from "@/components/micro_items/Button";
-import React, { useState } from "react";
+import { knowledgePageContext } from "@/components/page_items/admin/KnowledgePageContainer";
+import { TUploadedFile } from "@/common-types/types";
 
 type Props = {
   className?: string;
 };
 
 function DocumentUpload({ className }: Props) {
+  const { uploadedFiles, setUploadedFiles } = useContext(knowledgePageContext);
   const [isDragging, setIsDragging] = useState(false);
   const [file, setFile] = useState<File>();
 
@@ -30,10 +33,56 @@ function DocumentUpload({ className }: Props) {
     setFile(droppedFile);
   };
 
-  const handleConfirmUpload = () => {
+  const handleConfirmUpload = async () => {
     // Implement your logic for confirming and uploading the file
-    console.log("File uploaded:", file);
-    setFile(undefined);
+    file &&
+      (async () => {
+        console.log("File uploaded:", file);
+        const formData = new FormData();
+        formData.append("file", file);
+
+        // This way the file is sent as a binary file to the backend
+        // const response = await fetch("/api/upload", {
+        //   method: "POST",
+        //   body: formData,
+        // });
+
+        // This is only for the demo
+        const response = new Promise<string>((resolve, reject) => {
+          setTimeout(() => {
+            resolve(
+              JSON.stringify({
+                success: true,
+                message: `File: ${file.name} uploaded successfully`,
+                fileDetails: {
+                  fileName: file.name,
+                  size: Math.ceil(file.size / 1000).toString() + " KB",
+                  uploadedAt: new Date().toLocaleString(),
+                  uploadedBy: "Admin",
+                },
+              })
+            );
+            // reject(
+            //   JSON.stringify({ success: false, message: "File upload failed" })
+            // );
+          }, 1000);
+        });
+
+        response
+          .then((data) => {
+            console.log(data);
+            const parsedData = JSON.parse(data);
+            const newUploadedFile: TUploadedFile = parsedData.fileDetails;
+            setUploadedFiles((prevUploadedFiles) => [
+              ...prevUploadedFiles,
+              newUploadedFile,
+            ]);
+            setFile(undefined);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })();
   };
 
   return (
@@ -49,7 +98,7 @@ function DocumentUpload({ className }: Props) {
       >
         {!file ? (
           <>
-            <p className="text-gray-500">Drag file to upload</p>
+            <p className="text-gray-500/60">Drag file to upload</p>
             <input type="file" className="hidden" />
           </>
         ) : (

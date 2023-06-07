@@ -7,6 +7,13 @@ export interface IMessage {
     done?: boolean;
 }
 
+export type TUploadedFile = {
+    fileName: string;
+    size: string;
+    uploadedAt: string;
+    uploadedBy: string;
+};
+
 export enum NavSelection {
     knowledgeBase,
     activity,

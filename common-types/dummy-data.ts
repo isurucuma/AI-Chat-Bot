@@ -1,4 +1,4 @@
-import { IMessage } from "./types";
+import { IMessage, TUploadedFile } from "./types";
 
 export const dummyMessages: IMessage[] = [
     // { isFromUser: false, content: "Hi, how can I help you?" },
@@ -20,4 +20,25 @@ export const dummyMessages: IMessage[] = [
     //   content:
     //     "Great, thanks! but anyway I will heve to get you assistant in the future also, there fore please make sure to remember my past chat and data",
     // },
+  ];
+
+  export const dummyUploadedFiles: TUploadedFile[] = [
+    {
+      fileName: "order.pdf",
+      size: "1.2MB",
+      uploadedAt: "2021-01-01",
+      uploadedBy: "John Doe",
+    },
+    {
+      fileName: "invoice.pdf",
+      size: "0.5MB",
+      uploadedAt: "2021-01-02",
+      uploadedBy: "John Doe",
+    },
+    {
+      fileName: "receipt.pdf",
+      size: "0.8MB",
+      uploadedAt: "2021-01-03",
+      uploadedBy: "John Doe",
+    },
   ];

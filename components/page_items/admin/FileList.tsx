@@ -1,47 +1,16 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import { BsTrashFill } from "react-icons/bs";
-
-type File = {
-  fileName: string;
-  size: string;
-  uploadedAt: string;
-  uploadedBy: string;
-};
+import { TUploadedFile } from "@/common-types/types";
+import { knowledgePageContext } from "@/components/page_items/admin/KnowledgePageContainer";
 
 type FileListProps = {
-  files?: File[];
+  files?: TUploadedFile[];
 };
 
-const FileList: React.FC<FileListProps> = ({ files }) => {
-  if (!files) {
-    files = [
-      {
-        fileName: "file1.pdf",
-        size: "1.2 MB",
-        uploadedAt: "2021-01-01 12:00:00",
-        uploadedBy: "John Doe",
-      },
-      {
-        fileName: "file2.pdf",
-        size: "1.2 MB",
-        uploadedAt: "2021-01-01 12:00:00",
-        uploadedBy: "John Doe",
-      },
-      {
-        fileName: "file2.pdf",
-        size: "1.2 MB",
-        uploadedAt: "2021-01-01 12:00:00",
-        uploadedBy: "John Doe",
-      },
-      {
-        fileName: "file2.pdf",
-        size: "1.2 MB",
-        uploadedAt: "2021-01-01 12:00:00",
-        uploadedBy: "John Doe",
-      },
-    ];
-  }
+function FileList() {
+  const { uploadedFiles, setUploadedFiles } = useContext(knowledgePageContext);
+
   const handleDeleteFile = (fileName: string) => {
     // Implement your logic for deleting the file
     console.log("Deleting file:", fileName);
@@ -60,8 +29,8 @@ const FileList: React.FC<FileListProps> = ({ files }) => {
         </tr>
       </thead>
       <tbody className="text-slate-600">
-        {files &&
-          files.map((file, index) => (
+        {uploadedFiles &&
+          uploadedFiles.map((file, index) => (
             <tr
               key={index}
               className="bg-white border-b border-gray-300 hover:text-slate-900 hover:bg-slate-300/20 transition duratiopn-300"
@@ -89,6 +58,6 @@ const FileList: React.FC<FileListProps> = ({ files }) => {
       </tbody>
     </table>
   );
-};
+}
 
 export default FileList;

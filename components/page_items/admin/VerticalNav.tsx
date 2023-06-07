@@ -1,4 +1,3 @@
-"use client";
 import NavButton from "@/components/micro_items/NavButton";
 import React from "react";
 import { BsDatabaseCheck } from "react-icons/bs";
