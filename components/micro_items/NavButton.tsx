@@ -18,8 +18,8 @@ function NavButton({
 }: Props) {
   return (
     <div
-      className={`flex items-center flex-col hover:text-slate-300 transition duration-200 cursor-pointer ${
-        isSelected ? `text-slate-400` : `text-slate-500`
+      className={`flex items-center flex-col hover:text-slate-200 transition duration-200 cursor-pointer ${
+        isSelected ? `text-slate-300` : `text-slate-500`
       } ${className} gap-2 px-2 py-1 border-b-2 border-transparent hover:border-slate-3}`}
       onClick={handleClick}
     >

@@ -18,7 +18,7 @@ function VerticalNav({ className, navSelection, setNavSelection }: Props) {
         <NavButton
           name="Knowledge"
           ButtonIcon={BsDatabaseCheck}
-          isSelected
+          isSelected={navSelection === NavSelection.knowledgeBase}
           onClick={(event) => {
             setNavSelection(NavSelection.knowledgeBase);
           }}
@@ -26,6 +26,7 @@ function VerticalNav({ className, navSelection, setNavSelection }: Props) {
         <NavButton
           name="Activity"
           ButtonIcon={BsPlayCircle}
+          isSelected={navSelection === NavSelection.activity}
           onClick={(event) => {
             setNavSelection(NavSelection.activity);
           }}
@@ -33,6 +34,7 @@ function VerticalNav({ className, navSelection, setNavSelection }: Props) {
         <NavButton
           name="Keys"
           ButtonIcon={FaKey}
+          isSelected={navSelection === NavSelection.keys}
           onClick={(event) => {
             setNavSelection(NavSelection.keys);
           }}
