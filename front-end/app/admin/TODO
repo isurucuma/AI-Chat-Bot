@@ -1,6 +1,6 @@
-Login/logout features
-Can create new admins
-New document submit
-Show list of documents already submitted (can select and delete)
-Keywords for System prompt
-Should be able to switch on and off the AI auto replying
+- Login/logout features @done
+- Can create new admins
+- New document submit @done
+- Show list of documents already submitted (can select and delete) @done
+- Keywords for System prompt @done
+- Should be able to switch on and off the AI auto replying
