@@ -1,16 +1,25 @@
 "use client";
 import Button from "@/components/micro_items/Button";
-import React from "react";
+import React, { useContext } from "react";
 import { FaUserClock } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { AuthContext } from "../layout";
+import { AuthLevel } from "@/common-types/types";
 
 type Props = {};
 
 function Login({}: Props) {
   const router = useRouter();
+  const { user, setUser } = useContext(AuthContext);
   const verifyLogin = () => {
-    console.log("verifyLogin");
+    // send request to server to verify login
+    // if login is verified, set user state to admin
+    // here we are just setting user state to admin directly for dummy purpose    console.log("verifyLogin");
+    setUser({
+      authLevel: AuthLevel.ADMIN,
+      name: "Admin",
+    });
     router.push("/admin");
   };
   return (

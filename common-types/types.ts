@@ -19,3 +19,8 @@ export enum NavSelection {
     activity,
     keys,
 }
+
+export enum AuthLevel {
+    ADMIN,
+    NORMAL,
+  }

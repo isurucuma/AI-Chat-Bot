@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import { GiConcentrationOrb } from "react-icons/gi";
 import { FaUserClock } from "react-icons/fa";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
@@ -7,6 +7,8 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Button from "../micro_items/Button";
 import { useRouter } from "next/navigation";
+import { AuthContext } from "@/app/admin/layout";
+import { AuthLevel } from "@/common-types/types";
 
 type Props = {
   className?: string;
@@ -27,12 +29,20 @@ const menuItems = [
 ];
 
 function NavBar({ className }: Props) {
+  const { user, setUser } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleSignOut = () => {
+    setUser({
+      authLevel: AuthLevel.NORMAL,
+      name: "Guest",
+    });
   };
   return (
     <div className="relative w-full bg-white">
@@ -58,16 +68,15 @@ function NavBar({ className }: Props) {
           <button
             type="button"
             className="rounded-md bg-transparent px-3 py-2 text-sm font-semibold transition duration-300 hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-            onClick={() => router.push("/login")}
           >
-            Sign In
+            Admin
           </button>
           <button
             type="button"
             className="rounded-md border border-black px-3 py-2 text-sm font-semiboldshadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-            onClick={() => router.push("/login")}
+            onClick={handleSignOut}
           >
-            Log In
+            Sign Out
           </button>
         </div>
         <div className="lg:hidden">
@@ -132,13 +141,13 @@ function NavBar({ className }: Props) {
                       router.push("/login");
                     }}
                   >
-                    Sign In
+                    Admin
                   </button>
                   <button
                     type="button"
                     className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
-                    Log In
+                    Sign Out
                   </button>
                 </div>
               </div>

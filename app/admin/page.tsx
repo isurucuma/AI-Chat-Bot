@@ -1,18 +1,30 @@
 "use client";
 import KnowledgePageContainer from "@/components/page_items/admin/KnowledgePageContainer";
 import VerticalNav from "@/components/page_items/admin/VerticalNav";
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavSelection } from "@/common-types/types";
 import ActivityPageContainer from "@/components/page_items/admin/ActivityPageContainer";
 import KeysPageContainer from "@/components/page_items/admin/KeysPageContainer";
+import { AuthContext } from "./layout";
+import { useRouter } from "next/navigation";
 
 type Props = {};
 // create an enum to store the nav selection
 
 function Admin({}: Props) {
+  const router = useRouter();
+  const { user, setUser } = useContext(AuthContext);
+  useEffect(() => {
+    if (user.authLevel !== 0) {
+      console.log("User is not admin");
+      router.push("/admin/login");
+    }
+    console.log("Admin page rendered");
+  }, [user]);
   const [navSelection, setNavSelection] = useState<NavSelection>(
     NavSelection.knowledgeBase
   );
+
   return (
     <div
       className="flex flex-row my-4 px-4 gap-4"
