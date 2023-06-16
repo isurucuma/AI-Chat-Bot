@@ -1,0 +1,15 @@
+{
+  "name": "file-server",
+  "version": "1.0.0",
+  "description": "file server for the chat bot's files",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "isurucuma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  }
+}
