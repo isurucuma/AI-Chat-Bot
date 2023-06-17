@@ -76,6 +76,17 @@ function DocumentUpload({ className }: Props) {
     }
   };
 
+  const handleRetrainModel = async () => {
+    console.log("Retraining model");
+    // try {
+    //   const response = await fetch("http://localhost:3002/api/v1/retrain");
+    //   const data = await response.json();
+    //   console.log(data);
+    // } catch (error) {
+    //   console.error("An error occurred during model retraining:", error);
+    // }
+  };
+
   useEffect(() => {
     fillFilesTable();
   }, []);
@@ -102,12 +113,18 @@ function DocumentUpload({ className }: Props) {
           </>
         )}
       </div>
-      <div className="flex-1 flex pl-8 h-fit">
+      <div className="flex-initial flex gap-10 justify-between pl-8">
         <Button
           className="bg-blue-500 text-white px-4 rounded py-4"
           onClick={handleConfirmUpload}
           disabled={!file}
           name="Confirm Upload"
+        />
+        <Button
+          className="bg-red-600 text-white px-4 rounded py-2"
+          onClick={handleRetrainModel}
+          disabled={!file}
+          name="Retrain Model"
         />
       </div>
     </div>
