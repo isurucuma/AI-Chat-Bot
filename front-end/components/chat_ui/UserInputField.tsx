@@ -61,15 +61,6 @@ function UserInputField({ className }: Props) {
   async function sendUserMessage(message: string): Promise<string> {
     // create a promise that resolves after 1 second
     const promise = new Promise<string>((resolve, reject) => {
-      // setTimeout(() => {
-      //   // set timeout to simulate a response from the server
-      //   resolve("AI response");
-      // }, 2000);
-
-      // api link: localhost:3001/chat 
-      // method: POST
-      // body: {chatHistory:chatHistory, message: message}
-      // response: {message} 
       fetch("http://localhost:3001/chat", {
         method: "POST",
         headers: {
@@ -86,34 +77,10 @@ function UserInputField({ className }: Props) {
           console.error("Error:", error);
         }
         );
-
-        
-
     });
     return promise;
   }
 
-  // async function sendUserMessage(message: string): Promise<string> {
-  //   const promise = new Promise<string>((resolve, reject) => {
-  //     fetch(
-  //       "https://7dfe-35-231-31-81.ngrok.io/conversation?message=" + message,
-  //       {
-  //         method: "GET",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     )
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         resolve(data.message);
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error:", error);
-  //       });
-  //   });
-  //   return promise;
-  // }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(event.target.value);
@@ -174,9 +141,8 @@ function UserInputField({ className }: Props) {
         onEmojiSelect={(emoji: string) => {
           setMessage(message + emoji);
         }}
-        className={`absolute bottom-16 right-4 h-96 overflow-scroll transition-all ease-in duration-300 transform ${
-          showEmojiPicker ? "" : "hidden"
-        }`}
+        className={`absolute bottom-16 right-4 h-96 overflow-scroll transition-all ease-in duration-300 transform ${showEmojiPicker ? "" : "hidden"
+          }`}
         showEmojiPicker={showEmojiPicker}
         setShowEmojiPicker={setShowEmojiPicker}
       />

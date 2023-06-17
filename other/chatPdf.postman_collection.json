@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "af10620d-5133-40f4-bcc8-d4cc5d7bacfe",
+		"name": "chatPdf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21883286"
+	},
+	"item": [
+		{
+			"name": "create vDB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/updateBot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"updateBot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateMetaDta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bot_name\": \"namet\",\r\n    \"bot_role\": \"role\",\r\n    \"bot_style\": \"style\",\r\n    \"bot_tone\": \"tone\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/updateMetaDta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"updateMetaDta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateKey",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"openai_api_key\":\"sk-bla-bla-bla\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/updateKey",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"updateKey"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
