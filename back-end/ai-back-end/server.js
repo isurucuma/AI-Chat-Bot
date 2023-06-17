@@ -65,6 +65,8 @@ app.post('/updatePDF', updateBotController.updatePDF);
 
 app.post('/updateMetaDta', updateBotController.updateMetaDta);
 
+app.post('/updateKey', updateBotController.updateApiKey);
+
 app.listen(3001, () => {
   console.log('Server is listening on port 3001');
 });

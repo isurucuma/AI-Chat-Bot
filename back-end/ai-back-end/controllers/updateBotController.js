@@ -18,7 +18,14 @@ const updateBotController = {
     console.log(req.body)
     const response = await updateBot.updateMetaDta(botName, botRole, botStyle, botTone);
     res.send(response);
+  },
+
+  async updateApiKey(req, res) {
+    const openai_api_key = req.body.openai_api_key;
+    const response = await updateBot.updateApiKey(openai_api_key);
+    res.send(response);
   }
+
 };
 
 

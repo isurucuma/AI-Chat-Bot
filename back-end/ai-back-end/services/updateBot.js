@@ -7,6 +7,30 @@ const { Document } = require('langchain/document');
 const fs = require('fs');
 
 /**
+ * this funshion will update open ai key in .env file
+ * @param {*} openAiApiKey 
+ */
+async function updateApiKey(openAiApiKey) {
+    const envFilePath = './.env';
+
+    try {
+        // read the env file
+        const envFile = fs.readFileSync(envFilePath, 'utf8');
+
+        // update envFile
+        const newEnvFile = envFile.replace(/OPENAI_API_KEY=.*/, `OPENAI_API_KEY=${openAiApiKey}`);
+
+        // write the updated env file
+        fs.writeFileSync(envFilePath, newEnvFile);
+
+        return { status: 'success' };
+    } catch (err) {
+        console.error(err);
+        return { status: 'error' };
+    }
+}
+
+/**
  * update metadata of the bot
  * @param {string} bot_name - the name of the bot
  * @param {string} bot_role - the role of the bot
@@ -78,4 +102,4 @@ async function create_new_vectorstore(text_chunks) {
 
 
 
-module.exports = {createVectorDB,updateMetaDta };
+module.exports = {createVectorDB,updateMetaDta,updateApiKey };
