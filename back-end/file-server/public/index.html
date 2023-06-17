@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Upload Test</title>
+</head>
+<body>
+  <h1>File Upload Test</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".txt" />
+    <button type="submit">Upload</button>
+  </form>
+  <script>
+    // Optional: Show a message when the file is uploaded successfully
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const fileInput = document.querySelector('input[type="file"]');
+      const file = fileInput.files[0];
+      if (file) {
+        const formData = new FormData();
+        formData.append('file', file);
+        fetch('/upload', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+          console.log(data)
+          form.reset();
+        })
+        .catch(error => console.error(error));
+      }else{
+        console.log('No file selected');
+      }
+
+    });
+  </script>
+</body>
+</html>

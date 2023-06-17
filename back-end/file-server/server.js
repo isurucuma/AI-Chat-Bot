@@ -1,13 +1,23 @@
-const path = require("path");
 const express = require("express");
 const multer = require("multer");
+const { v4: uuidv4 } = require("uuid");
+const path = require("path");
 
+const app = express();
+
+// Multer configuration
 const storage = multer.diskStorage({
-  destination: (req, file, callBak) => callBak(null, "./media"),
-  filename: (req, file, callBack) => callBack(null, req.body.fileName),
+  destination: "./media",
+  filename: (req, file, cb) => {
+    const uniqueId = uuidv4();
+    const fileName = `${
+      path.parse(file.originalname).name
+    }-${uniqueId}${path.extname(file.originalname)}`;
+    cb(null, fileName);
+  },
 });
 const upload = multer({
-  storage: storage,
+  storage,
   fileFilter: (req, file, callBack) => {
     if (file.mimetype === "application/pdf") {
       callBack(null, true);
@@ -17,25 +27,23 @@ const upload = multer({
   },
 });
 
-const app = express();
+// Serve static files
+app.use(express.static("public"));
 
-app.use(express.json({ extended: true }));
+// POST route for file upload
+app.post("/upload", upload.single("file"), (req, res) => {
+  if (!req.file) {
+    return res.status(400).send("No file uploaded.");
+  }
+  const uploadedFile = req.file;
+  console.log("Uploaded file:", uploadedFile);
 
-// use this if you want to handle url encoded form data
-// app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-
-// teeling express to use the static file path as /media
-app.use("/media", express.static(path.resolve(__dirname, "./media")));
-
-app.post("/upload", upload.single("myFile"), (req, res) => {
-  console.log(res);
-  res.json({ message: "File uploaded successfully" });
+  // Return the uploaded file name to the user
+  res.status(200).send(`Uploaded file name: ${uploadedFile.filename}`);
 });
 
-app.listen(3001, "localhost", (err) => {
-  if (err) {
-    console.log(err);
-    return;
-  }
-  console.log("Server is running at http://localhost:3001");
+// Start the server
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
