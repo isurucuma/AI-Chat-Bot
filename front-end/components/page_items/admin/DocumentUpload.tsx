@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect, use } from "react";
 import Button from "@/components/micro_items/Button";
 import { knowledgePageContext } from "@/components/page_items/admin/KnowledgePageContainer";
 import { TUploadedFile } from "@/common-types/types";
@@ -33,57 +33,52 @@ function DocumentUpload({ className }: Props) {
     setFile(droppedFile);
   };
 
+  const fillFilesTable = async () => {
+    try {
+      const response = await fetch("http://localhost:3001/api/v1/files");
+      const data = await response.json();
+      console.log(data);
+      const uploadedFiles: TUploadedFile[] = data.map((file: any) => {
+        const joinedFilename = file.fileName;
+        let uploadedFile: TUploadedFile = {
+          fileName: joinedFilename,
+          size: file.size,
+          uploadedAt: new Date(file.uploadedAt).toLocaleString(),
+          uploadedBy: file.uploadedBy,
+        };
+        return uploadedFile;
+      });
+      setUploadedFiles(uploadedFiles);
+    } catch (error) {
+      console.error("An error occurred during fetching file list:", error);
+    }
+  };
+
   const handleConfirmUpload = async () => {
-    // Implement your logic for confirming and uploading the file
-    file &&
-      (async () => {
-        console.log("File uploaded:", file);
+    try {
+      if (file) {
         const formData = new FormData();
         formData.append("file", file);
 
-        // This way the file is sent as a binary file to the backend
-        // const response = await fetch("/api/upload", {
-        //   method: "POST",
-        //   body: formData,
-        // });
-
-        // This is only for the demo
-        const response = new Promise<string>((resolve, reject) => {
-          setTimeout(() => {
-            resolve(
-              JSON.stringify({
-                success: true,
-                message: `File: ${file.name} uploaded successfully`,
-                fileDetails: {
-                  fileName: file.name,
-                  size: Math.ceil(file.size / 1000).toString() + " KB",
-                  uploadedAt: new Date().toLocaleString(),
-                  uploadedBy: "Admin",
-                },
-              })
-            );
-            // reject(
-            //   JSON.stringify({ success: false, message: "File upload failed" })
-            // );
-          }, 1000);
+        // Send the file as a binary file to the backend
+        const response = await fetch("http://localhost:3001/api/v1/upload", {
+          method: "POST",
+          body: formData,
         });
 
-        response
-          .then((data) => {
-            console.log(data);
-            const parsedData = JSON.parse(data);
-            const newUploadedFile: TUploadedFile = parsedData.fileDetails;
-            setUploadedFiles((prevUploadedFiles) => [
-              ...prevUploadedFiles,
-              newUploadedFile,
-            ]);
-            setFile(undefined);
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      })();
+        const data = await response.json();
+        console.log(data);
+        // just call to fill the files table
+        await fillFilesTable();
+      }
+    } catch (error) {
+      console.error("An error occurred during file upload:", error);
+    }
   };
+
+  useEffect(() => {
+    fillFilesTable();
+  }, []);
 
   return (
     <div className={`flex flex-row items-center ${className}`}>

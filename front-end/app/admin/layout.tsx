@@ -29,7 +29,7 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   const [user, setUser] = useState<User>({
-    authLevel: AuthLevel.NORMAL,
+    authLevel: AuthLevel.ADMIN,
     name: "Guest",
   });
   const router = useRouter();

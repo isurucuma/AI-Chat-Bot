@@ -11,9 +11,26 @@ type FileListProps = {
 function FileList() {
   const { uploadedFiles, setUploadedFiles } = useContext(knowledgePageContext);
 
-  const handleDeleteFile = (fileName: string) => {
-    // Implement your logic for deleting the file
-    console.log("Deleting file:", fileName);
+  const handleDeleteFile = async (fileName: string) => {
+    try {
+      const response = await fetch(
+        `http://localhost:3001/api/v1/files?fileName=${fileName}`,
+        {
+          method: "DELETE",
+        }
+      );
+      if (response.status !== 200) {
+        throw new Error("An error occurred during deleting file");
+      }
+
+      const data = await response.json();
+
+      setUploadedFiles((prev) =>
+        prev.filter((file) => file.fileName !== data.fileName)
+      );
+    } catch (error) {
+      console.error("An error occurred during deleting file:", error);
+    }
   };
 
   return (
@@ -22,7 +39,7 @@ function FileList() {
         <tr>
           <th className="py-2 px-4 text-left text-blue-600/60">Select</th>
           <th className="py-2 px-4 text-left text-blue-600/60">File Name</th>
-          <th className="py-2 px-4 text-left text-blue-600/60">Size</th>
+          <th className="py-2 px-4 text-left text-blue-600/60">{"Size(kB)"}</th>
           <th className="py-2 px-4 text-left text-blue-600/60">Uploaded At</th>
           <th className="py-2 px-4 text-left text-blue-600/60">Uploaded By</th>
           <th className="py-2 px-4 text-left text-blue-600/60">Actions</th>

@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const deleteController = (req, res) => {
-  const fileName = req.query.filename;
+  const fileName = req.query.fileName;
   if (!fileName) {
     return res.status(400).send("Missing URL parameter: filename");
   }
@@ -20,11 +20,10 @@ const deleteController = (req, res) => {
         console.error(err);
         return res
           .status(500)
-          .send("An error occurred while deleting the file.");
+          .json({ message: "persistant file delete operation failed" });
       }
-
       // File deleted successfully
-      res.status(200).send(`File "${fileName}" deleted.`);
+      res.status(200).json({ fileName: fileName });
     });
   });
 };
@@ -41,8 +40,43 @@ const getAllFileNamesController = (req, res) => {
         .send("An error occurred while retrieving the files.");
     }
 
-    // Send the list of files as the response
-    res.status(200).json({ files });
+    // Retrieve metadata for each file
+    const filePromises = files.map((file) => {
+      return new Promise((resolve, reject) => {
+        const filePath = path.join(mediaDir, file);
+
+        // Get the file stats to retrieve metadata
+        fs.stat(filePath, (err, stats) => {
+          if (err) {
+            console.error(err);
+            reject(err);
+          }
+
+          // Extract the metadata
+          const metadata = {
+            fileName: file,
+            size: Math.ceil(stats.size / 1024),
+            uploadedAt: stats.birthtime,
+            uploadedBy: "admin", // You can customize this value as needed
+          };
+
+          resolve(metadata);
+        });
+      });
+    });
+
+    // Wait for all promises to resolve
+    Promise.all(filePromises)
+      .then((metadataList) => {
+        // Send the list of files with metadata as the response
+        res.status(200).json(metadataList);
+      })
+      .catch((err) => {
+        console.error(err);
+        res
+          .status(500)
+          .send("An error occurred while retrieving file metadata.");
+      });
   });
 };
 
@@ -124,7 +158,7 @@ const uploadFileController = (req, res) => {
   console.log("Uploaded file:", uploadedFile);
 
   // Return the uploaded file name to the user
-  res.status(200).send(`Uploaded file name: ${uploadedFile.filename}`);
+  res.status(200).json({ uploadedFile: `${uploadedFile.filename}` });
 };
 
 module.exports = {
