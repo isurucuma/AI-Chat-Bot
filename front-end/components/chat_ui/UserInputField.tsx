@@ -61,10 +61,34 @@ function UserInputField({ className }: Props) {
   async function sendUserMessage(message: string): Promise<string> {
     // create a promise that resolves after 1 second
     const promise = new Promise<string>((resolve, reject) => {
-      setTimeout(() => {
-        // set timeout to simulate a response from the server
-        resolve("AI response");
-      }, 2000);
+      // setTimeout(() => {
+      //   // set timeout to simulate a response from the server
+      //   resolve("AI response");
+      // }, 2000);
+
+      // api link: localhost:3001/chat 
+      // method: POST
+      // body: {chatHistory:chatHistory, message: message}
+      // response: {message} 
+      fetch("http://localhost:3001/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ chatHistory: chatHistory, message: message }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          resolve(data.message);
+        }
+        )
+        .catch((error) => {
+          console.error("Error:", error);
+        }
+        );
+
+        
+
     });
     return promise;
   }
