@@ -61,7 +61,9 @@ app.get('/', (req, res) => {
 
 app.post('/chat', chatController.get_response);
 
-app.post('/updateBot', updateBotController.updateBot);
+app.post('/updatePDF', updateBotController.updatePDF);
+
+app.post('/updateMetaDta', updateBotController.updateMetaDta);
 
 app.listen(3001, () => {
   console.log('Server is listening on port 3001');
