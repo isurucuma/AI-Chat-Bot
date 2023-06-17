@@ -10,3 +10,6 @@ coverage
 
 # Benchmarking
 benchmarks/graphs
+
+/dummy-files
+/media
