@@ -1,1 +1,4 @@
-- use multer for handling file uploads (https://www.npmjs.com/package/multer)
+- use multer for handling file uploads (https://www.npmjs.com/package/multer) @done
+- file crud @done
+- file download @done
+- static file serving @done
