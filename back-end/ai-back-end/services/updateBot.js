@@ -6,6 +6,42 @@ const { PDFLoader } = require('langchain/document_loaders/fs/pdf');
 const { Document } = require('langchain/document');
 const fs = require('fs');
 
+
+// get metaData
+async function getMetaDta() {
+    const configFilePath = './config.json';
+
+    try {
+        // read the config file
+        const configFile = fs.readFileSync(configFilePath, 'utf8');
+        const config = JSON.parse(configFile);
+
+        return { status: 'success', data: config.bot_metaData };
+    } catch (err) {
+        console.error(err);
+        return { status: 'error' };
+    }
+}
+
+// get open ai key in .env file
+async function getApiKey() {
+    const envFilePath = './.env';
+
+    try {
+        // read the env file
+        const envFile = fs.readFileSync(envFilePath, 'utf8');
+
+        // get open ai key
+        const openAiApiKey = envFile.match(/OPENAI_API_KEY=(.*)/)[1];
+
+        return { status: 'success', data: openAiApiKey };
+    } catch (err) {
+        console.error(err);
+        return { status: 'error' };
+    }
+}
+
+
 /**
  * this funshion will update open ai key in .env file
  * @param {*} openAiApiKey 
@@ -102,4 +138,4 @@ async function create_new_vectorstore(text_chunks) {
 
 
 
-module.exports = {createVectorDB,updateMetaDta,updateApiKey };
+module.exports = {createVectorDB,updateMetaDta,updateApiKey,getApiKey,getMetaDta};
