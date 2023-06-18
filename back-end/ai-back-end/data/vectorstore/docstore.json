@@ -1,55 +1,27 @@
 [
     [
         [
-            "cbb07b43-e59e-462d-8a1b-51a2fd7099cc",
+            "24c14b0d-f59b-410f-9e8a-8887171bc6e4",
             {
-                "pageContent": "Udara Nilupul\n \nBandara\n \n \nTP : \n+94773111987\n \nE mail: \nudara.unb98@gmail.com\n \nLinkedIn:\n \nwww.linkedin.com/in/udara\n-\nnilupul\n-\n27b525191/\n \nGitHub : \nUdaraN98\n \n \nAbout Me\n \nI’m currently following my degree in \nBSc. (Eng.) in Electrical and \nElectronics engineering as a final \nyear student in Faculty of \nEngineering, University of Jaffna. I \nhave a huge enthusiasm in\n \nDigital \nSignal Processing,\n \nArtificial \nIntelligence, Machine Learning, \nCl\noud and Edge Computing related \nResearch and Projects.\n \n \nS\nkills\n \n\n \nMachine Learning \n(Tensorflow, Keras, Pytorch)\n \n\n \nCloud Computing\n \n(AWS,GCP)\n \n\n \nDigital Signal Processing \n(MATLAB, SciPy)\n \n\n \nComputer Vision (OpenCV)\n \n\n \nEmbedded Systems Design \n(Arduino, Rasp. Pi)\n \n\n \nEdge Computing \n \n\n \nComputer Programming \nProficiency (Python, C++, \nJava, MATLAB)\n \n \n \n \nE\nducation\n \nBSc. (Hons) Engineering in Electrical and Electronic Engineering\n \n(Reading)\n \nFaculty of Engineering\n \n| \nUniversity of Jaffna\n \nCGPA : 3.4748",
+                "pageContent": "Education\n \n \n \nTechnical Strengths\n \nProgramming \nLanguages\n \nPython | Java | JavaScript\n \n| SQL\n \nWeb Development\n \nDjango | Node\n.js \n-\n \nExpress \n| React | Bootstrap 4\n \nMobile Development\n \nFlutter\n \nDatabases\n \nPostgreSQL | MySQL | \nCloud Firestore\n \nOther\n \nGit | Figma\n \n| Heroku | Netlify\n \n| OOP | Design Patterns\n \n \nProjects\n \n \n \n \n \navishkas.18@cse.mrt.ac.lk\n \n \n+94777583582\n \n \nlinkedin.com/in/avishka\n-\nshamendra/\n \n \ngithub.com/Avishka\n-\nShamendra\n \n \n15/2,\n \nParakrama Road, \nGampaha, Sri Lanka\n \nUniversity of Moratuwa, Sri Lanka\n \nOctober 201\n8\n \n–\n \nPresent\n \n \nBachelor of Science Engineering (Hons.) in Computer Science Engineering\n \nC\nurrent \nGPA\n:\n \n4.1\n4\n \n/\n \n4.20\n \nNalanda College, Colombo\n, Sri Lanka\n \nJanuary 2004 \n–\n \nAugust 2017\n \nG.C.E Advanced Level Examination\n \nZ\n-\nScore: 2.314\n \n \nWork\n \nExperience\n \nSoftware Engineering\n \nIntern\n \n–\n \ni\nXD Labs (Pvt) Ltd.\n \nMay\n \n202\n0\n \n–\n \nApril\n \n2021",
                 "metadata": {
                     "loc": {
                         "lines": {
                             "from": 1,
-                            "to": 96
+                            "to": 129
                         }
                     }
                 }
             }
         ],
         [
-            "9b2b4801-a01f-4650-abb2-7056f507f7eb",
+            "f8d4444b-3b0e-4a94-a649-9f55b14f5ea6",
             {
-                "pageContent": "Java, MATLAB)\n \n \n \n \nE\nducation\n \nBSc. (Hons) Engineering in Electrical and Electronic Engineering\n \n(Reading)\n \nFaculty of Engineering\n \n| \nUniversity of Jaffna\n \nCGPA : 3.4748\n \nG.C.E Advanced Level \nExamination 2017 : Physical Science Stream\n \n3B | Z score : 1.4542\n \nG.C.E Ordinary Level Examination 2014\n \n9A\n \n \nExperience\n \nIntern Data Engineer\n \n(\nMLOps\n)\n \nat Dialog Axiata PLC. (Feb 2023 \n-\n \nPresent\n)\n \n\n \nCreation of production grade machine le\narning solutions for \nenterprise, \n \n\n \nResearch and Development for NLP \napplications\n \nuse cases\n \n\n \nUnified viewing tools\n \ndevelopment\n \nfor cloud resource utilizati\non\n.\n \n \nCertificatio\nns\n \n \n\n \nDigital Signal Processing Specialization (Coursera and EPFL)\n \n\n \nM\nathematics for Machine Learning Specialization (Coursrea and \nImperial College London)\n \n\n \nMachine Learning with Tensorflow on Google \nCloud \nSpecialization (Coursera and Google Cloud)\n \n\n \nAWS Machine learning Foundations (AWS and Udacity)\n \n",
+                "pageContent": "–\n \nAugust 2017\n \nG.C.E Advanced Level Examination\n \nZ\n-\nScore: 2.314\n \n \nWork\n \nExperience\n \nSoftware Engineering\n \nIntern\n \n–\n \ni\nXD Labs (Pvt) Ltd.\n \nMay\n \n202\n0\n \n–\n \nApril\n \n2021\n \n \nWorked  as  a  part  time  intern  at \ni\nXD  Labs  (Pvt)  Ltd\n.\n \nfor  a  12\n-\nmonth  period.  Gained  experience \ni\nn  API \ndevelopment, web app\nlication\n \ndevelopment and mobile \napplication\n \ndevelopment.\n \nCollaborated\n \nwith\n \na small \nteam \nto \ncomplete projects within a given time frame\n.\n \nUniLabs Inventory Management System\n \nJuly\n \n2021 \n–\n \nPresent\n \nTech\nnologies\n: Django\n \n|\n \nReact\n-\nRedux\n \n|\n \nFlutter\n-\nB\nL\no\nC\n \n|\n \nPostgreSQL\n \nS\nemester 5 \nP\nroject\n \nA\n \nweb  and mobile  based\n \nautomated\n \ninventory  management system  for  university  laboratories. \nThe system introduces a barcode system to make inventory management user \nfriendly.\n \n \nLinks\n: \nDemo\n, \nSource Code\n \nCOVID\n-\n19 Situational Analysis Dashboard\n \nMarch 2021\n \nTechnologies: React | React\n-\nRedux | Google Charts",
                 "metadata": {
                     "loc": {
                         "lines": {
-                            "from": 96,
-                            "to": 187
-                        }
-                    }
-                }
-            }
-        ],
-        [
-            "21461803-617c-4859-82fa-8de53774f820",
-            {
-                "pageContent": "Imperial College London)\n \n\n \nMachine Learning with Tensorflow on Google \nCloud \nSpecialization (Coursera and Google Cloud)\n \n\n \nAWS Machine learning Foundations (AWS and Udacity)\n \n\n \nCloud Machine Learning and MLOps course (Duke university and \nCoursera)\n \n\n \nIntroduction to Machine \nLearning on AWS (Coursera and AWS)\n \n\n \nContainerized Applications on AWS (Coursera and AWS)\n \n\n \nComputer Vision for Embedded Machine learning (\nEdge Impulse \nand Cour\nsera\n)\n \n \nProjects\n \n \nComputation offloading capable application development for Multi \nAccess Edge Computing (Undergraduate Research Project)\n \n\n \nThe Developed application is able to \nefficiently offload \ncomputationally Expensive Tasks to Edge Servers while \noptimizing the energy usage and computational latency.\n \n\n \nJava, Kotlin and Python languages were used to develop \nthe application. \n \nSmart Door lock with two phase authentication using \nembedded \nsystems\n \n\n \nDesigned and prototyped smart door lock with voice",
-                "metadata": {
-                    "loc": {
-                        "lines": {
-                            "from": 187,
-                            "to": 246
-                        }
-                    }
-                }
-            }
-        ],
-        [
-            "2d052167-8c0d-4fe4-b09f-2cf75458f1d6",
-            {
-                "pageContent": "the application. \n \nSmart Door lock with two phase authentication using \nembedded \nsystems\n \n\n \nDesigned and prototyped smart door lock with voice \npassword protection and keypad password. An",
-                "metadata": {
-                    "loc": {
-                        "lines": {
-                            "from": 246,
+                            "from": 129,
                             "to": 255
                         }
                     }
@@ -57,70 +29,154 @@
             }
         ],
         [
-            "9c3443de-ecfb-4623-9cdd-6f743582394f",
+            "9132cd49-1b7b-4dfc-87ff-17235bbbc317",
             {
-                "pageContent": "Professional \nMemberships\n \n\n \nStudent Member of Institute \nof Engineers Sri Lanka (IESL)\n \n\n \nStudent Member of Institute \nof Electrical and Electronic \nEngineers (IEEE\n-\n \nUSA) \n \n \n \nLanguages\n \n \n\n \nEnglish \n–\nProfessional \nworking p\nroficiency\n \n \n\n \nS\ninhala \n–\n \nN\native or \nbilingual\n \nproficiency\n \nATMega328p microcontroller used for this project with \nmicro machine learning and Digital Signal processing \ntechniques.\n \n\n \nHere I used Arduino for e\nmbedded system programming, \nSciPy for Digital Signal Processing, and MicroML module \nto optimize ML models for embedded devices.\n \nLanguage Classifier using Digital Signal Processing and Statistical \napproaches\n \n\n \nInitially a MATLAB code is written to process, fi\nlter and \nextract statistical data from the audio files recorded from \nstudents. Then using that data, predictions were made \nfor the test audio files using another MATLAB code.\n \n \n \nDesigning an Artificial Neural Network from scratch using python\n \n \n",
+                "pageContent": "friendly.\n \n \nLinks\n: \nDemo\n, \nSource Code\n \nCOVID\n-\n19 Situational Analysis Dashboard\n \nMarch 2021\n \nTechnologies: React | React\n-\nRedux | Google Charts\n \nPersonal Project\n \nCovid\n-\n19 dashboard to provide daily and historical \nstatistics\n \nin a graphical manner.\n \nLinks:\n \nDemo\n, \nSource Code\n \n \nA   h\nardworking, \nenerg\netic\n \nthird\n-\nyear \nC\nomputer \nS\ncience \nand   E\nngineering \nundergraduate  passionate  about \nsoftware  development\n \nand  problem  solving\n.\n \nSeeking a\nn \ninternship \nopportunity\n \nto \ngain \nindustrial \nexperience\n \nand learn new \ntechnologie\ns\n.\n \n \nAvishka Shamendra",
+                "metadata": {
+                    "loc": {
+                        "lines": {
+                            "from": 255,
+                            "to": 326
+                        }
+                    }
+                }
+            }
+        ],
+        [
+            "3f3d868e-aac4-4711-b380-9675fad7b8e1",
+            {
+                "pageContent": "..\n \n \n \n \n \nEvent Management Web Application\n \nMarch 2021\n \n-\n \nApril 2021\n \nTechnologies: React | React\n-\nRedux | \nFirebase\n \niXD Internship Project\n \nA\n \nreal time\n \nevent management application for a company to \nschedule and \nmanage \nevents\n \nlike \nwebinars\n \nand\n \ntech\n-\ntalks\n.\n \nThe  application  allow\ns\n \nVimeo  streaming,  attendance  tracking  and  live \nQ&A sessions.\n \nAirline Reservation System\n \nDecember 2020 \n-\n \nMarch 2021\n \nTech\nnologies\n: \nNode\n.js\n \n|\n \nExpress\n \n|\n \nPostgreSQL\n \nSemester 4\n \nDatabase\n \nSystems \nProject\n \nA\n \nweb\n-\nbased\n \nair\nline\n \nreservation  system  that \nallows\n \nflight  booking  for  customers  and \nflight \nscheduling for \nairline management.\n \nDatabase design involved transactions, views, triggers etc.\n \nLinks: \nDemo\n, \nSource Code\n,\n \nVideo\n \nAgro \nWholesale \nMarketplace\n \nDecember 2020 \n–\n \nFebruary 2021\n \nTech\nnologies\n: Node\n.js\n \n|\n \nExpress\n \n|\n \nPostgreSQL\n \n|\n \nBootstrap \n \nSemester 4\n \nSoftware Eng.\n \nProject",
                 "metadata": {
                     "loc": {
                         "lines": {
                             "from": 1,
-                            "to": 71
+                            "to": 132
                         }
                     }
                 }
             }
         ],
         [
-            "74e10dff-13bf-4547-87fa-4299baac6317",
+            "6b140eec-426b-4d47-8e72-b2ab3a5c4e91",
             {
-                "pageContent": "students. Then using that data, predictions were made \nfor the test audio files using another MATLAB code.\n \n \n \nDesigning an Artificial Neural Network from scratch using python\n \n \n\n \nThis project was done to understand the mathematical \noperations that \nrunning behind neural networks. A fully \nfunctional ANN was implemented from scratch just using \nPython Numpy module.\n \n \n \nAchievements\n \n \nACES Coders V9.0 \n-\n12 hours Competiti\nve Programming Competition\n \n2022\n \nAll Island Rank : 32\n \n \nIEEE Xtreme 16.0\n-\n \n24 hours Competitive Programming Competition\n \n2022\n \nSrl Lanka Rank :56\n \nGlobal Rank : 791\n \n \nIEEE Xtreme 15.0 \n-\n24 hours Competitive Programming Competition\n \n2021\n \nSri Lanka Rank : 109\n \nGlobal \nRank : 929\n \n \nAxiata Digital Labs AI Hackathon 2021\n \nAsia Rank :58",
+                "pageContent": ",\n \nVideo\n \nAgro \nWholesale \nMarketplace\n \nDecember 2020 \n–\n \nFebruary 2021\n \nTech\nnologies\n: Node\n.js\n \n|\n \nExpress\n \n|\n \nPostgreSQL\n \n|\n \nBootstrap \n \nSemester 4\n \nSoftware Eng.\n \nProject\n \nA  web  application\n \nwhich \nallows  farmers  to \npost  about\n \ntheir  harvested  produce  up  for  sale  and \nwholesale \nbuyers to privately respond with \nbids.\n \nFollowed MVC architecture.\n \nLinks: \nDemo\n, \nSource Code\n \nMora GPA Mobile Application\n \nSeptember 2020\n \nTech\nnologies\n: Flutter\n \nPersonal Project\n \nA  mobile  application  for \nundergraduates  of  University  of  Moratuwa  to  keep  track  of  their  GPA\n. \nAvailable on Google Play Store with 100+ downloads.\n \nLinks:\n \nPlay \nStore\n, \nSource Code\n \nAsset Management Application\n \nSeptember \n2020\n \n–\n \nFebruary 2021\n \nTechnologies: \nFlutter | Flutter B\nL\no\nC\n \niXD Internship Project\n \nA m\nobile\n \napplication developed\n \nas part of an asset management system\n \nfor \nan \nAustralia\nn client\n.\n \nThe main objective of the system was",
                 "metadata": {
                     "loc": {
                         "lines": {
-                            "from": 71,
-                            "to": 128
+                            "from": 132,
+                            "to": 238
                         }
                     }
                 }
             }
         ],
         [
-            "1bf814bf-34c3-47a2-a3e1-c1ecd5d1be26",
+            "0363806f-f590-42d8-97fe-3ead6ef23528",
             {
-                "pageContent": "Madusha Keshan\nsoftware engineer internship\nNattandiya, Sri Lanka\nmwmadushakeshan99@gmail.com\n768919670\nI’m currently following my degree in BSc. (Hons.) in ComputerEngineering as a fourth-year student in\nthe Faculty of Engineering,University of Jaffna. I'm interested in an internship in backend or full stack\nsoftware engineering\nEducation\nBSc. (Hons) in Computer Engineering\nUniversity of Jaffna\nSeptember 2018 to Present\nSkills\n•\nJava\n•\nExpress.js\n•\nMongoDB\n•\nReact.js\n•\nJavaScript\n•\nC++\n•\nNode.js\n•\nMySQL\n•\nGitHub\nLinks\nhttp://www.linkedin.com/in/mwm-keshan/\nhttps://github.com/keshan99\nCertifications and Licenses\nNeural Networks and Deep Learning\nNovember 2021 to Present\nhttps://coursera.org/share/e32f693698521ce47e637e13521edca6",
+                "pageContent": "Flutter | Flutter B\nL\no\nC\n \niXD Internship Project\n \nA m\nobile\n \napplication developed\n \nas part of an asset management system\n \nfor \nan \nAustralia\nn client\n.\n \nThe main objective of the system was \nto manage delivery vehicles\n \nand\n \nagents\n.\n \nCB\n-\n3D Website\n \nMay\n \n2020\n \n–\n \nAugust\n \n2020\n \nTech\nnologies\n: \nNode\n.js\n \n|\n \nExpress\n \n|\n \nPostgre\nSQL\n \niXD Internship Project\n \nWebsite and administration portal with online order management for a 3D printing \nservice.\n \nMainly \nengaged\n \nwith backend development\n.\n \nFollowed MVC architecture.\n \nLinks: \nWeb Page\n \nMy Timetable Mobile Application\n \nApril\n \n2020\n \nTech\nnologies\n: Flutter\n \nPersonal Project\n \nA mobile application for school\n \nand\n \nuniversity\n \nstudents to store their timetable. Available \no\nn \nG\noogle \nP\nlay \nS\ntore with 5000+ downloads\n.\n \nLinks: \nPlay Store",
+                "metadata": {
+                    "loc": {
+                        "lines": {
+                            "from": 238,
+                            "to": 341
+                        }
+                    }
+                }
+            }
+        ],
+        [
+            "5f22d0a8-46a6-4357-aff4-14e88f00148e",
+            {
+                "pageContent": "Hackathons\n \nIEEEXtreme 14.0  2020\n \n–\n \n24 hr. hackathon\n \nSri Lankan Rank 08                        \n \nMoraXtreme 5.0 2020 \n–\n \n12 hr. hackathon\n \nRank 08                        \n \nMoraXtreme 4.0 2019 \n–\n \n12 hr. hackathon\n \nRank 11                        \n \n \nCertificates\n \nand Courses\n \n▪\n \nThe Complete 2020 Flutter Development Bootcamp with Dart \n \n(London App Brewery, Udemy)\n \nView Certificate\n \n▪\n \nHackerRank Problem Solving (Intermediate)\n \nView Certificate\n \n▪\n \nHTML,\n \nCSS and JavaSc\nript for Web Developers (Coursera)\n \nView Certificate\n \n▪\n \nThe Complete Figma Course \n–\n \nDesigning Mobile & Web App UI/UX \n(Udemy)\n \nView Certificate\n \n \nCOVID\n-\n19 Stats Mobile Application\n \nMarch \n2020\n \nTech\nnologies\n: Flutter\n \nPersonal Project\n \nA mobile application developed to provide local and global \nC\novid\n-\n19 \nstatistics\n.\n \nLinks: \nSource Code",
                 "metadata": {
                     "loc": {
                         "lines": {
                             "from": 1,
-                            "to": 38
+                            "to": 86
                         }
                     }
                 }
             }
         ],
         [
-            "16e43860-f80b-494d-bdac-879ddc3ccbbe",
+            "d170c253-e094-435a-92f8-b620633a68c6",
             {
-                "pageContent": "Additional Information\nACHIEVEMENTS \n• Axiata Digital Labs AI Hackathon(2021) - Asian Rank 58 \n• Aces coders v9.0 | organized by UOP - Rank 13 \n• IEEEXtreme(15.0) – SL Rank 33 \n• Code Squad V3.0 | organized by USJ - Rank 25 \n \nPROJECT \n• Dos Attack Detection Under Quic Protocol Using Machine Learning \n(research project) \nThere is much research done in the field of detecting DDoS attacks on TCP, UDP, and ICMP like\nprotocols but no research done to detect DDoS attacks on QUIC protocol. Therefore, we aim to train a\nmachine learning based model to detect DDoS attacks under the QUIC protocol \n \n• Uni Buddy - Student Helper System \nTechnologies: EJS | Node.js - Express | MySQL \nThis software solution is for University students common 3 problems. This system is to help the\nstudents with money management, making Task Lists with sub-task, and saving notes. \n \n• Course Approval And Exam Approval System \n(group project) \nTechnologies: React | Node.js - Express | MongoDB",
+                "pageContent": "1\n0\n-\nA\n \nT\ne\nm\np\nl\ne\n \nR\nd\n.\n \nH\na\nl\nd\na\nn\nd\nu\nw\na\nn\na\nD\na\nn\nk\no\nt\nu\nw\na\nR\ne\ns\ne\na\nr\nc\nh\n \nP\nr\no\nj\ne\nc\nt\nA\nc\na\nd\ne\nm\ni\nc\n \nC\na\nl\ne\nn\nd\na\nr\n \nM\na\nn\na\ng\ne\nm\ne\nn\nt\n \nS\ny\ns\nt\ne\nm\nf\no\nr\n \nF\na\nc\nu\nl\nt\ny\n \nF\nu\nl\nl\n-\ns\nt\na\nc\nk\n \na\np\np\nl\ni\nc\na\nt\ni\no\nn\n \nu\ns\ni\nn\ng\n \nN\ne\nx\nt\n.\nj\ns\n,\n \nM\no\nn\ng\no\nD\nB\n \na\nn\nd\n \nM\nS\nP\no\nw\ne\nr\n \nA\nu\nt\no\nm\na\nt\ne\n \nt\no\n \na\nu\nt\no\nm\na\nt\ne\n \ne\nm\na\ni\nl\ns\n \na\nn\nd\n \nn\no\nt\ni\nf\ni\nc\na\nt\ni\no\nn\ns\ng\ni\nt\nh\nu\nb\n.\nc\no\nm\n/\nI\ns\nu\nr\nu\nA\nk\na\nl\na\nn\nk\na\n/\na\nc\na\nd\ne\nm\ni\nc\n_\nc\na\nl\ne\nn\nd\na\nr\nA\nI\n \nC\nh\na\nt\nb\no\nt\n \nf\no\nr\n \nF\na\nc\nu\nl\nt\ny\n \nW\ne\nb\ns\ni\nt\ne\nF\nu\nl\nl\n-\ns\nt\na\nc\nk\n \na\np\np\nl\ni\nc\na\nt\ni\no\nn\n \nu\ns\ni\nn\ng\n \nD\nj\na\nn\ng\no\n \nb\na\nc\nk\ne\nn\nd\n \nw\ni\nt\nh\n \nM\nL\nm\no\nd\ne\nl\n \na\nn\nd\n \nR\ne\na\nc\nt\n \nf\nr\no\nn\nt\ne\nn\nd\n \nw\nh\ni\nc\nh\n \nc\na\nn\n \na\nn\ns\nw\ne\nr\n \nc\no\nm\nm\no\nn\nq\nu\ne\ns\nt\ni\no\nn\ns\n \na\nb\no\nu\nt\n \nf\na\nc\nu\nl\nt\ny\ng\ni\nt\nh\nu\nb\n.\nc\no\nm\n/\nI\ns\nu\nr\nu\nA\nk\na\nl\na\nn\nk\na\n/\nA\nI\n_\nc\nh\na\nt\nb\no\nt\n_\nE\nC\n9\n6\n4\n0\nS\ni\nm\np\nl\ne\n \nH\no\nm\ne\n \nA\nu\nt\no\nm\na\nt\ni\no\nn\n \nS\ny\ns\nt\ne\nm\nE\nm\nb\ne\nd\nd\ne\nd\n \nd\ne\ns\ni\ng\nn\n \nu\ns\ni\nn\ng\n \nA\nT\nM\ne\ng\na\n3\n2\n8",
                 "metadata": {
                     "loc": {
                         "lines": {
                             "from": 1,
-                            "to": 22
+                            "to": 499
                         }
                     }
                 }
             }
         ],
         [
-            "4273da77-e5c0-46e5-a08c-c1bf15a304b5",
+            "2318dc77-2abf-493b-9245-68daabade55d",
             {
-                "pageContent": "students with money management, making Task Lists with sub-task, and saving notes. \n \n• Course Approval And Exam Approval System \n(group project) \nTechnologies: React | Node.js - Express | MongoDB \nThis app focuses on course registration, exam registration, course approval, and exam approval for\nFOE UOJ \n \nVOLUNTEER WORK \n• Chairman at IEEE Robotics and Automation Society, Student Chapter - University of Jaffna (2022 -\nPresent) \n• Vice Chairman at IEEE Robotics and Automation Society, Student Chapter - University of Jaffna (2021\n- 2022) \n• Representative of E18 Robotic club, FOE, UOJ (2018 - 2022)",
+                "pageContent": "h\nu\nb\n.\nc\no\nm\n/\nI\ns\nu\nr\nu\nA\nk\na\nl\na\nn\nk\na\n/\nA\nI\n_\nc\nh\na\nt\nb\no\nt\n_\nE\nC\n9\n6\n4\n0\nS\ni\nm\np\nl\ne\n \nH\no\nm\ne\n \nA\nu\nt\no\nm\na\nt\ni\no\nn\n \nS\ny\ns\nt\ne\nm\nE\nm\nb\ne\nd\nd\ne\nd\n \nd\ne\ns\ni\ng\nn\n \nu\ns\ni\nn\ng\n \nA\nT\nM\ne\ng\na\n3\n2\n8\n \nM\nC\nU\n,\n \nH\nC\n-\n0\n6\n,\n \nD\nH\nT\nS\ne\nn\ns\no\nr\n,\n \na\nn\nd\n \nR\nT\nC\n \nm\no\nd\nu\nl\ne\n.\n \nA\nb\ni\nl\ni\nt\ny\n \nt\no\n \ns\ne\nt\n \nt\ni\nm\ne\nr\ns\n,\n \nt\ne\nm\np\n,\n \na\nn\nd\nh\nu\nm\ni\nd\ni\nt\ny\n \np\na\nr\na\nm\ne\nt\ne\nr\ns\n \nt\no\n \nc\no\nn\nt\nr\no\nl\n \nh\no\nm\ne\n \na\np\np\nl\ni\na\nn\nc\ne\ns\n.\nP\ny\nt\nh\no\nn\n \nG\nU\nI\n \na\np\np\n \ni\nn\n \nP\ny\nQ\nT\n \nt\no\n \ns\ne\nt\n \ns\ne\nt\nt\ni\nn\ng\ns\n \nu\ns\ni\nn\ng\n \nB\nl\nu\ne\nt\no\no\nt\nh\ng\ni\nt\nh\nu\nb\n.\nc\no\nm\n/\nI\ns\nu\nr\nu\nA\nk\na\nl\na\nn\nk\na\n/\nh\no\nm\ne\n-\na\nu\nt\no\nm\na\nt\ni\no\nn\n-\ne\nm\nb\ne\nd\nd\ne\nd\nR\nE\nF\nE\nR\nE\nE\nS\nHead of Department of\nComputer Engineering, UOJ\nkanes@eng.jfn.ac.lk\n+94-77-204-2863\nLecturer (Probationary)\nComputer Engineering, UOJ\nyaalini@eng.jfn.ac.lk\n+94-77-719-8007\nD\nr\n.\n \nA\n.\n \nK\na\nn\ne\ns\nw\na\nr\na\nn\nM\ns\n.\n \nB\n.\n \nY\na\na\nl\ni\nn\ni\nR\ne\na\nc\nt\nN\no\nd\ne\n.\nj\ns\nD\nj\na\nn\ng\no\nJ\nS\n/\nT\nS\nJ\nA\nV\nA\nT\na\ni\nl\nw\ni\nn\nd\nP\ny\nt\nh\no\nn\nR\nu\ns\nt\nH\nT\nM\nL\nC\nS\nS\nP\ny",
                 "metadata": {
                     "loc": {
                         "lines": {
-                            "from": 22,
-                            "to": 35
+                            "from": 499,
+                            "to": 920
+                        }
+                    }
+                }
+            }
+        ],
+        [
+            "f40feecf-b4df-45f3-8155-385acd7f5a96",
+            {
+                "pageContent": "+94-77-719-8007\nD\nr\n.\n \nA\n.\n \nK\na\nn\ne\ns\nw\na\nr\na\nn\nM\ns\n.\n \nB\n.\n \nY\na\na\nl\ni\nn\ni\nR\ne\na\nc\nt\nN\no\nd\ne\n.\nj\ns\nD\nj\na\nn\ng\no\nJ\nS\n/\nT\nS\nJ\nA\nV\nA\nT\na\ni\nl\nw\ni\nn\nd\nP\ny\nt\nh\no\nn\nR\nu\ns\nt\nH\nT\nM\nL\nC\nS\nS\nP\ny\nQ\nT\nM\no\nn\ng\no\nD\nB\nA\nB\nO\nU\nT\n \nM\nE\nI\n \na\nm\n \np\na\ns\ns\ni\no\nn\na\nt\ne\n \na\nb\no\nu\nt\n \nd\ne\nv\ne\nl\no\np\ni\nn\ng\n \ns\no\nf\nt\nw\na\nr\ne\n \ns\no\nl\nu\nt\ni\no\nn\ns\n \nf\no\nr\n \nr\ne\na\nl\n-\nw\no\nr\nl\nd\n \np\nr\no\nb\nl\ne\nm\ns\n.\n \nI\n \nl\no\nv\ne\n \nt\no\n \ns\nh\na\nr\ne\n \nm\ny\nk\nn\no\nw\nl\ne\nd\ng\ne\n \nw\ni\nt\nh\n \no\nt\nh\ne\nr\ns\n \na\nn\nd\n \nt\no\n \nl\ne\na\nr\nn\n \nf\nr\no\nm\n \nt\nh\ne\nm\n.\nE\nD\nU\nC\nA\nT\nI\nO\nN\nB\n.\nS\nc\n \n(\nH\no\nn\ns\n)\n \nI\nn\n \nC\no\nm\np\nu\nt\ne\nr\n \nE\nn\ng\ni\nn\ne\ne\nr\ni\nn\ng\n \nU\nn\ni\nv\ne\nr\ns\ni\nt\ny\n \no\nf\n \nJ\na\nf\nf\nn\na\n \n(\n2\n0\n1\n8\n \n-\n \nP\nr\ne\ns\ne\nn\nt\n)\nP\nR\nO\nJ\nE\nC\nT\nS\nQ\nU\nI\nC\n \ni\ns\n \nt\nh\ne\n \ne\nm\ne\nr\ng\ni\nn\ng\n \nt\nr\na\nn\ns\np\no\nr\nt\n \nl\na\ny\ne\nr\n \np\nr\no\nt\no\nc\no\nl\n.\n \nI\n \na\nm\n \nd\no\ni\nn\ng\nm\ny\n \nr\ne\ns\ne\na\nr\nc\nh\n \nt\no\n \nd\ne\ns\ni\ng\nn\n \nM\nL\n \nm\no\nd\ne\nl\n \nt\no\n \nd\ne\nt\ne\nc\nt\n \nD\no\nS\n \na\nt\nt\na\nc\nk\ns\nu\nn\nd\ne\nr\n \nQ\nU\nI\nC\n \np\nr\no\nt\no\nc\no\nl\n.\nD\no\ns\n \nA\nt\nt\na\nc\nk\n \nD\ne\nt\ne\nc\nt\ni\no\nn\n \nU\nn\nd\ne\nr\n \nQ\nU\nI\nC",
+                "metadata": {
+                    "loc": {
+                        "lines": {
+                            "from": 920,
+                            "to": 1412
+                        }
+                    }
+                }
+            }
+        ],
+        [
+            "36559b42-7acd-4706-8752-1f870b3a12a0",
+            {
+                "pageContent": "r\ne\ns\ne\na\nr\nc\nh\n \nt\no\n \nd\ne\ns\ni\ng\nn\n \nM\nL\n \nm\no\nd\ne\nl\n \nt\no\n \nd\ne\nt\ne\nc\nt\n \nD\no\nS\n \na\nt\nt\na\nc\nk\ns\nu\nn\nd\ne\nr\n \nQ\nU\nI\nC\n \np\nr\no\nt\no\nc\no\nl\n.\nD\no\ns\n \nA\nt\nt\na\nc\nk\n \nD\ne\nt\ne\nc\nt\ni\no\nn\n \nU\nn\nd\ne\nr\n \nQ\nU\nI\nC\n \nP\nr\no\nt\no\nc\no\nl\nU\ns\ni\nn\ng\n \nM\na\nc\nh\ni\nn\ne\n \nL\ne\na\nr\nn\ni\nn\ng\nA\nC\nH\nI\nE\nV\nE\nM\nE\nN\nT\nS\nI\nE\nE\nE\nX\nt\nr\ne\nm\ne\n \n1\n6\n.\n0\n \n2\n0\n2\n2\n \nH\na\nc\nk\na\nt\nh\no\nn\nS\nr\ni\n \nL\na\nn\nk\na\n \nr\na\nn\nk\n \n4\n6\nA\nx\ni\na\nt\na\n \nD\ni\ng\ni\nt\na\nl\n \nL\na\nb\ns\n \nA\nI\n \nH\na\nc\nk\na\nt\nh\no\nn\n \n-\n \n2\n0\n2\n1\nA\ns\ni\na\n \nr\na\nn\nk\n \n5\n8\nR\no\nb\no\nt\nr\ni\nc\nk\ns\n'\n2\n1\n \nL\ni\nn\ne\n \nf\no\nl\nl\no\nw\ni\nn\ng\n \nr\no\nb\no\nt\n \nc\no\nm\np\ne\nt\ni\nt\ni\no\nn\n \nb\ny\nR\nA\nS\n \nU\nO\nP\nT\no\np\n \n1\n0\n \nR\no\nb\no\nt\ns\nS\nK\nI\nL\nL\nS\nI\nS\nU\nR\nU\n \nC\nU\nM\nA\nR\nA\nN\nA\nT\nH\nU\nN\nG\nA\nS\nO\nF\nT\nW\nA\nR\nE\n \nE\nN\nG\nI\nN\nE\nE\nR\n \n(\nI\nN\nT\nE\nR\nN\n)\n+\n9\n4\n-\n7\n7\n-\n3\n7\n9\n-\n3\n2\n1\n4\ni\ns\nu\nr\nu\n-\nc\nu\nm\na\nr\na\nn\na\nt\nh\nu\nn\ng\na\n.\nv\ne\nr\nc\ne\nl\n.\na\np\np\ni\ns\nu\nr\nu\nc\nu\nm\na\n@\ng\nm\na\ni\nl\n.\nc\no\nm\nl\ni\nn\nk\ne\nd\ni\nn\n.\nc\no\nm\n/\ni\nn\n/\ni\ns\nu\nr\nu\n-\nc\nu\nm\na\nr\na\nn\na\nt\nh\nu\nn\ng\na\ng\ni\nt\nh\nu\nb\n.\nc\no\nm\n/\nI\ns\nu\nr\nu\nA\nk\na\nl\na\nn\nk\na\nW\nO\nR\nK\n \nE\nX\nP\nE\nR\nI\nE\nN",
+                "metadata": {
+                    "loc": {
+                        "lines": {
+                            "from": 1412,
+                            "to": 1911
+                        }
+                    }
+                }
+            }
+        ],
+        [
+            "024737c9-08e2-4495-8330-03f8b40ad834",
+            {
+                "pageContent": "r\nc\ne\nl\n.\na\np\np\ni\ns\nu\nr\nu\nc\nu\nm\na\n@\ng\nm\na\ni\nl\n.\nc\no\nm\nl\ni\nn\nk\ne\nd\ni\nn\n.\nc\no\nm\n/\ni\nn\n/\ni\ns\nu\nr\nu\n-\nc\nu\nm\na\nr\na\nn\na\nt\nh\nu\nn\ng\na\ng\ni\nt\nh\nu\nb\n.\nc\no\nm\n/\nI\ns\nu\nr\nu\nA\nk\na\nl\na\nn\nk\na\nW\nO\nR\nK\n \nE\nX\nP\nE\nR\nI\nE\nN\nC\nE\nT\nr\na\ni\nn\ne\ne\n \nE\nn\ng\ni\nn\ne\ne\nr\ni\nn\ng\n \nA\ns\ns\ni\ns\nt\na\nn\nt\n3\nS\n \nF\na\nb\nr\ni\nc\na\nr\ni\no\nn\ns\n \n(\nP\nv\nt\n)\n \nL\nt\nd\n \n(\nE\nn\ng\ni\nn\ne\ne\nr\ni\nn\ng\n \nD\ne\np\na\nr\nt\nm\ne\nn\nt\n)\nD\ne\ns\ni\ng\nn\n \nE\nn\ng\ni\nn\ne\ne\nr\ni\nn\ng\n \nd\nr\na\nw\ni\nn\ng\ns\n \nu\ns\ni\nn\ng\n \nS\no\nl\ni\nd\nw\no\nr\nk\ns\nP\na\nr\nt\ni\nc\ni\np\na\nt\ne\nd\n \nf\no\nr\n \nd\na\ni\nl\ny\n \na\nu\nd\ni\nt\ns\n \na\nn\nd\n \ni\nn\ns\np\ne\nc\nt\ni\no\nn\ns\nC\no\nl\nl\na\nb\no\nr\na\nt\ni\nv\ne\n \nw\no\nr\nk\n \nw\ni\nt\nh\n \ne\nn\ng\ni\nn\ne\ne\nr\ni\nn\ng\n \nt\ne\na\nm\nS\ne\np\nt\ne\nm\nb\ne\nr\n \n2\n0\n1\n7\n \n-\n \nJ\nu\nn\ne\n \n2\n0\n1\n8\n \n(\n9\n \nm\no\nn\nt\nh\ns\n)\nV\nO\nL\nU\nN\nT\nE\nE\nR\n \nW\nO\nR\nK\nS\n(\nJ\nu\nn\ne\n \n2\n0\n2\n1\n \n-\n \nJ\nu\nn\ne\n \n2\n0\n2\n2\n)\nA\ns\ns\ni\ns\nt\na\nn\nt\n \nS\ne\nc\nr\ne\nt\na\nr\ny\nI\nE\nE\nE\n \nR\nA\nS\n \nS\nt\nu\nd\ne\nn\nt\n \nC\nh\na\np\nt\ne\nr\nU\nn\ni\nv\ne\nr\ns\ni\nt\ny\n \no\nf\n \nJ\na\nf\nf\nn\na\n(\nS\ne\np\nt\ne\nm\nb\ne\nr\n \n2\n0\n2\n2\n \n-\n \nP\nr\ne\ns\ne\nn\nt\n)\nP\nr\ne\ns\ni\nd\ne\nn\nt\nC\no\nm\np\nu\nt\ne\nr\n \nE\nn\ng\ni\nn\ne\ne\nr",
+                "metadata": {
+                    "loc": {
+                        "lines": {
+                            "from": 1911,
+                            "to": 2410
+                        }
+                    }
+                }
+            }
+        ],
+        [
+            "ab9ea3df-b340-4e9c-9cdf-f7f6d563d6af",
+            {
+                "pageContent": "t\na\nr\ny\nI\nE\nE\nE\n \nR\nA\nS\n \nS\nt\nu\nd\ne\nn\nt\n \nC\nh\na\np\nt\ne\nr\nU\nn\ni\nv\ne\nr\ns\ni\nt\ny\n \no\nf\n \nJ\na\nf\nf\nn\na\n(\nS\ne\np\nt\ne\nm\nb\ne\nr\n \n2\n0\n2\n2\n \n-\n \nP\nr\ne\ns\ne\nn\nt\n)\nP\nr\ne\ns\ni\nd\ne\nn\nt\nC\no\nm\np\nu\nt\ne\nr\n \nE\nn\ng\ni\nn\ne\ne\nr\ni\nn\ng\nS\no\nc\ni\ne\nt\ny\n \nU\nn\ni\nv\ne\nr\ns\ni\nt\ny\n \no\nf\n \nJ\na\nf\nf\nn\na\nt\nw\ni\nt\nt\ne\nr\n.\nc\no\nm\n/\ni\ns\nu\nr\nu\nc\nu\nm\na\nC\nu\nr\nr\ne\nn\nt\n \nG\nP\nA\n \n-\n \n3\n.\n3\n5\nL\na\nn\ng\nu\na\ng\ne\ns\n \n/\n \nW\ne\nb\n \ns\nu\ni\nt\nR\nu\nn\nt\ni\nm\ne\ns\n,\n \nF\nr\na\nm\ne\nw\no\nr\nk\ns\n \na\nn\nd\n \nL\ni\nb\nr\na\nr\ni\ne\ns\nM\ny\nS\nQ\nL\nD\na\nt\na\nb\na\ns\ne\ns\nS\no\nf\nt\n \nS\nk\ni\nl\nl\ns\nT\ne\na\nm\nw\no\nr\nk\nF\nl\ne\nx\ni\nb\ni\nl\ni\nt\ny\nE\nf\nf\ne\nc\nt\ni\nv\ne\n \nc\no\nm\nm\nu\nn\ni\nc\na\nt\ni\no\nn\nR\ne\ns\np\no\nn\ns\ni\nb\nl\ne\nP\nr\no\nb\nl\ne\nm\n \ns\no\nl\nv\ni\nn\ng\nC\nr\ni\nt\ni\nc\na\nl\n \nt\nh\ni\nn\nk\ni\nn\ng\nB\ni\ng\n \nd\na\nt\na\n \nh\na\nn\nd\nl\ni\nn\ng\nD\ne\ns\ni\ng\nn\nE\nr\nr\no\nr\n \nh\na\nn\nd\nl\ni\nn\ng",
+                "metadata": {
+                    "loc": {
+                        "lines": {
+                            "from": 2410,
+                            "to": 2780
                         }
                     }
                 }
@@ -128,14 +184,18 @@
         ]
     ],
     {
-        "0": "cbb07b43-e59e-462d-8a1b-51a2fd7099cc",
-        "1": "9b2b4801-a01f-4650-abb2-7056f507f7eb",
-        "2": "21461803-617c-4859-82fa-8de53774f820",
-        "3": "2d052167-8c0d-4fe4-b09f-2cf75458f1d6",
-        "4": "9c3443de-ecfb-4623-9cdd-6f743582394f",
-        "5": "74e10dff-13bf-4547-87fa-4299baac6317",
-        "6": "1bf814bf-34c3-47a2-a3e1-c1ecd5d1be26",
-        "7": "16e43860-f80b-494d-bdac-879ddc3ccbbe",
-        "8": "4273da77-e5c0-46e5-a08c-c1bf15a304b5"
+        "0": "24c14b0d-f59b-410f-9e8a-8887171bc6e4",
+        "1": "f8d4444b-3b0e-4a94-a649-9f55b14f5ea6",
+        "2": "9132cd49-1b7b-4dfc-87ff-17235bbbc317",
+        "3": "3f3d868e-aac4-4711-b380-9675fad7b8e1",
+        "4": "6b140eec-426b-4d47-8e72-b2ab3a5c4e91",
+        "5": "0363806f-f590-42d8-97fe-3ead6ef23528",
+        "6": "5f22d0a8-46a6-4357-aff4-14e88f00148e",
+        "7": "d170c253-e094-435a-92f8-b620633a68c6",
+        "8": "2318dc77-2abf-493b-9245-68daabade55d",
+        "9": "f40feecf-b4df-45f3-8155-385acd7f5a96",
+        "10": "36559b42-7acd-4706-8752-1f870b3a12a0",
+        "11": "024737c9-08e2-4495-8330-03f8b40ad834",
+        "12": "ab9ea3df-b340-4e9c-9cdf-f7f6d563d6af"
     }
 ]

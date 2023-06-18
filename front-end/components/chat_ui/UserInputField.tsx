@@ -61,7 +61,7 @@ function UserInputField({ className }: Props) {
   async function sendUserMessage(message: string): Promise<string> {
     // create a promise that resolves after 1 second
     const promise = new Promise<string>((resolve, reject) => {
-      fetch("http://localhost:3001/chat", {
+      fetch("http://localhost:3002/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
