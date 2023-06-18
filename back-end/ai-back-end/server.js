@@ -29,6 +29,6 @@ app.get('/getMetaDta', botController.getMetaDta);
 app.post('/updateKey', botController.updateApiKey);
 app.get('/getKey', botController.getApiKey);
 
-app.listen(3001, () => {
-  console.log('Server is listening on port 3001');
+app.listen(3002, () => {
+  console.log('Server is listening on port 3002');
 });

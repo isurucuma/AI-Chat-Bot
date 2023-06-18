@@ -1,6 +1,6 @@
 "use client";
 import Button from "@/components/micro_items/Button";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 type Props = {
   className?: string;
@@ -11,17 +11,40 @@ function BotInfo({ className }: Props) {
   const [botRole, setbotRole] = useState("");
   const [botStyle, setbotStyle] = useState("");
   const [botTone, setbotTone] = useState("");
-  const [botConstraints, setbotConstraints] = useState("");
+
+  // use Efect for load the data from the database
+  // api: localhost:3002/getMetaDta
+  useEffect(() => {
+    fetch("http://localhost:3002/getMetaDta")
+      .then((response) => response.json())
+      .then((data) => {
+        setbotName(data.metaData.bot_name);
+        setbotRole(data.metaData.bot_role);
+        setbotStyle(data.metaData.bot_style);
+        setbotTone(data.metaData.bot_tone);
+      });
+  }, []);
 
   // use this method to handle the update button click
   const handleUpdateButtonClink = () => {
-    console.log(botName, botRole, botStyle, botTone, botConstraints);
-    // clear the input fields
-    setbotName("");
-    setbotRole("");
-    setbotStyle("");
-    setbotTone("");
-    setbotConstraints("");
+    console.log(botName, botRole, botStyle, botTone);
+    fetch("http://localhost:3002/updateMetaDta", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        bot_name: botName,
+        bot_role: botRole,
+        bot_style: botStyle,
+        bot_tone: botTone,
+      }),
+    })  
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      }
+      );
   };
 
   let labelStyles = `col-span-1 text-lg text-slate-600 px-2 py-1`;
@@ -70,7 +93,7 @@ function BotInfo({ className }: Props) {
             value={botTone}
           />
         </div>
-        <div className={formItemStyles}>
+        {/* <div className={formItemStyles}>
           <label className={labelStyles}>Constraints</label>
           <input
             className={`${inputStyles}`}
@@ -79,7 +102,7 @@ function BotInfo({ className }: Props) {
             }}
             value={botConstraints}
           />
-        </div>
+        </div> */}
       </form>
       <div className="col-span-2">
         <div className="border-[1px] border-dashed border-red-500 rounded-md px-8 py-4 text-center text-gray-600">

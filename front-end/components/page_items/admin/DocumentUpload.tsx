@@ -77,14 +77,17 @@ function DocumentUpload({ className }: Props) {
   };
 
   const handleRetrainModel = async () => {
-    console.log("Retraining model");
-    // try {
-    //   const response = await fetch("http://localhost:3002/api/v1/retrain");
-    //   const data = await response.json();
-    //   console.log(data);
-    // } catch (error) {
-    //   console.error("An error occurred during model retraining:", error);
-    // }
+    fetch("http://localhost:3002/updatePDF", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      }
+      );
   };
 
   useEffect(() => {
@@ -94,9 +97,8 @@ function DocumentUpload({ className }: Props) {
   return (
     <div className={`flex flex-row items-center ${className}`}>
       <div
-        className={`flex-1 border-2 border-dashed rounded-lg p-4 h-32 flex items-center justify-center ${
-          isDragging ? "bg-gray-200" : "bg-white"
-        }`}
+        className={`flex-1 border-2 border-dashed rounded-lg p-4 h-32 flex items-center justify-center ${isDragging ? "bg-gray-200" : "bg-white"
+          }`}
         onDragEnter={(event) => handleDragEnter(event)}
         onDragOver={(event) => handleDragOver(event)}
         onDragLeave={() => handleDragLeave()}
@@ -120,12 +122,14 @@ function DocumentUpload({ className }: Props) {
           disabled={!file}
           name="Confirm Upload"
         />
-        <Button
+        {/* <Button
           className="bg-red-600 text-white px-4 rounded py-2"
           onClick={handleRetrainModel}
-          disabled={!file}
+          // disabled={!file}
+          disabled={false}
           name="Retrain Model"
-        />
+        /> */}
+        <button className="bg-red-600 text-white px-4 rounded py-2" onClick={handleRetrainModel}>Retrain Model</button>
       </div>
     </div>
   );

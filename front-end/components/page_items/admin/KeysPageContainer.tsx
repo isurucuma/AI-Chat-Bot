@@ -1,15 +1,33 @@
 "use client";
 import Button from "@/components/micro_items/Button";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 type Props = {};
 
-function KeysPageContainer({}: Props) {
+function KeysPageContainer({ }: Props) {
   const [openApiKey, setOpenApiKey] = useState("");
   const handleSubmit = () => {
-    console.log(openApiKey);
-    setOpenApiKey("");
+    fetch("http://localhost:3002/updateKey", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ openai_api_key: openApiKey }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      }
+      );
   };
+
+  useEffect(() => {
+    fetch("http://localhost:3002/getKey")
+      .then((response) => response.json())
+      .then((data) => {
+        setOpenApiKey(data.data);
+      });
+  }, []);
 
   return (
     <div className="mt-40 flex flex-row justify-center gap-20 items-center">
