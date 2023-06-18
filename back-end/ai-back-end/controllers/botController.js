@@ -2,9 +2,9 @@
 const updateBot = require('../services/updateBot');
 
 
-// The updateBotController handles incoming requests related to updating the bot's settings
+// The botController handles incoming requests related to updating the bot's settings
 // and sends responses back to the client
-const updateBotController = {
+const botController = {
   async updatePDF(req, res) {
     const response = await updateBot.createVectorDB();
     res.send(response);
@@ -24,6 +24,16 @@ const updateBotController = {
     const openai_api_key = req.body.openai_api_key;
     const response = await updateBot.updateApiKey(openai_api_key);
     res.send(response);
+  },
+
+  async getMetaDta(req, res) {
+    const response = await updateBot.getMetaDta();
+    res.send(response);
+  },
+
+  async getApiKey(req, res) {
+    const response = await updateBot.getApiKey();
+    res.send(response);
   }
 
 };
@@ -31,4 +41,4 @@ const updateBotController = {
 
 
 
-module.exports = updateBotController;
+module.exports = botController;
