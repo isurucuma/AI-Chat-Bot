@@ -24,7 +24,7 @@ A tool to create, customize and deploy chatbot applications fast🚀 and easily�
 
 ## High-level Architecture🤓
 
-![Architecture](Screenshots\Archi.png)
+![Architecture](Screenshots/Archi.png)
 
 
 ## How to use ?🤔
