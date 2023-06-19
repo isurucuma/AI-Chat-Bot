@@ -104,10 +104,6 @@ function DocumentUpload({ className }: Props) {
       });
       const jsonRes = await response.json();
       console.log(jsonRes);
-      // const timeoutPromise = new Promise((resolve) => {
-      //   setTimeout(() => resolve({ timeout: true }), 2000); // Timeout duration: 5 seconds (adjust as needed)
-      // });
-      // await timeoutPromise;
       setTrainingStatus(TrainingStatus.SUCCESSFUL);
     } catch (error) {
       console.error("An error occurred during retraining process:", error);
@@ -149,14 +145,7 @@ function DocumentUpload({ className }: Props) {
             </svg>
             <span className="sr-only">Info</span>
             <div className="ml-3 text-sm font-medium">
-              A simple info alert with an{" "}
-              <a
-                href="#"
-                className="font-semibold underline hover:no-underline"
-              >
-                example link
-              </a>
-              . Give it a click if you like.
+              Training process is going on. Please wait...
             </div>
             <button
               type="button"
@@ -203,14 +192,7 @@ function DocumentUpload({ className }: Props) {
             </svg>
             <span className="sr-only">Info</span>
             <div className="ml-3 text-sm font-medium">
-              A simple info alert with an{" "}
-              <a
-                href="#"
-                className="font-semibold underline hover:no-underline"
-              >
-                example link
-              </a>
-              . Give it a click if you like.
+              Training process is completed successfully.
             </div>
             <button
               type="button"
@@ -257,14 +239,7 @@ function DocumentUpload({ className }: Props) {
             </svg>
             <span className="sr-only">Info</span>
             <div className="ml-3 text-sm font-medium">
-              A simple info alert with an{" "}
-              <a
-                href="#"
-                className="font-semibold underline hover:no-underline"
-              >
-                example link
-              </a>
-              . Give it a click if you like.
+              Training process failed. Please contact the developer.
             </div>
             <button
               type="button"
