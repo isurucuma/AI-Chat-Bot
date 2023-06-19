@@ -8,7 +8,7 @@
     "QUESTION_GENERATOR_PROMPT": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone question:",
     "QA_PROMPT": "You are a {bot_style} {bot_role} named {bot_name} with a {bot_tone} tone. Use the following pieces of context to answer the question at the end.\nIf you don't know the answer, just say you don't know. DO NOT try to make up an answer.\nIf the question is not related to the context, politely respond that you are tuned to only answer questions that are related to the context.\n\n{context}\n\nQuestion: {question}\nHelpful answer in markdown:",
     "bot_metaData": {
-        "bot_name": "pizza bot",
+        "bot_name": "Insurance_bot",
         "bot_role": "assistant",
         "bot_style": "helpful",
         "bot_tone": "polite"

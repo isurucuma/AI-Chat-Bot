@@ -6,26 +6,49 @@ import { TUploadedFile } from "@/common-types/types";
 import { dummyUploadedFiles } from "@/common-types/dummy-data";
 
 type Props = {};
+enum TrainingStatus {
+  NOT_STARTED,
+  SUCCESSFUL,
+  IN_PROGRESS,
+  ERROR,
+}
 
 type KnowledgePageContextType = {
   uploadedFiles: TUploadedFile[];
   setUploadedFiles: React.Dispatch<React.SetStateAction<TUploadedFile[]>>;
+  isRetraining: boolean;
+  setIsRetraining: React.Dispatch<React.SetStateAction<boolean>>;
+  trainingStatus: TrainingStatus;
+  setTrainingStatus: React.Dispatch<React.SetStateAction<TrainingStatus>>;
 };
 
 export const knowledgePageContext = createContext<KnowledgePageContextType>({
   uploadedFiles: [],
   setUploadedFiles: () => {},
+  isRetraining: false,
+  setIsRetraining: () => {},
+  trainingStatus: TrainingStatus.NOT_STARTED,
+  setTrainingStatus: () => {},
 });
 
 function PageContainer({}: Props) {
   const [uploadedFiles, setUploadedFiles] =
     useState<TUploadedFile[]>(dummyUploadedFiles);
 
+  const [isRetraining, setIsRetraining] = useState(false);
+  const [trainingStatus, setTrainingStatus] = useState<TrainingStatus>(
+    TrainingStatus.NOT_STARTED
+  );
+
   return (
     <knowledgePageContext.Provider
       value={{
         uploadedFiles: uploadedFiles,
         setUploadedFiles: setUploadedFiles,
+        isRetraining: isRetraining,
+        setIsRetraining: setIsRetraining,
+        trainingStatus: trainingStatus,
+        setTrainingStatus: setTrainingStatus,
       }}
     >
       <BotInfo className="mt-2" />
