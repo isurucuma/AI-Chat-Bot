@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 🤖 Chatbot Creator v1.0
 
-First, run the development server:
+A tool to create, customize and deploy chatbot applications fast🚀 and easily😃!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack 👨‍💻
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Front-End:** React
 
-## Deploy on Vercel
+**Back-End:** Node, Express, Langchain
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Embeddings:** OpenAI text-ada-002
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**LLM:** OpenAI GPT-3.5 turbo
+
+**Vector Database:** FAISS (Facebook AI Similarity Search)
+
+
+## High-level Architecture🤓
+
+![Architecture](Screenshots\Archi.png)
+
+
+## How to use ?🤔
+
+* Add basic information of the chatbot and its features(Role, Style, Chatting tone, Constraints) in the **Knowledge Section**.
+
+* Drag and drop reference documents for the Knowledge Base (KB) of the chatbot. These Documents will be refernced by the chatbot while interacting with users.
+
+* Add the API token secret keys (OpenAI) in the **Keys** section.
+
+* Include the <ChatUI/\> component within your current codebase (later we will give a pluggable npm module).
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Support and Contribution
+
+For support, email udara.unb98@gmail.com or join our Slack channel.
+
+
+## Authors
+
+- [@Isuru Cumaranathunga](https://github.com/isurucuma)
+
+- [@Madusha Keshan](https://github.com/keshan99)
+
+- [@Udara Nilupul](https://github.com/UdaraN98)
