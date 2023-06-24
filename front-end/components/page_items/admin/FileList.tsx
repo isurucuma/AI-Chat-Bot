@@ -9,7 +9,14 @@ type FileListProps = {
 };
 
 function FileList() {
-  const { uploadedFiles, setUploadedFiles } = useContext(knowledgePageContext);
+  const {
+    uploadedFiles,
+    setUploadedFiles,
+    isRetraining,
+    setIsRetraining,
+    trainingStatus,
+    setTrainingStatus,
+  } = useContext(knowledgePageContext);
 
   const handleDeleteFile = async (fileName: string) => {
     try {
@@ -34,7 +41,11 @@ function FileList() {
   };
 
   return (
-    <table className="w-full bg-transparent">
+    <table
+      className={`${
+        isRetraining && "pointer-events-none"
+      } w-full bg-transparent`}
+    >
       <thead>
         <tr>
           <th className="py-2 px-4 text-left text-blue-600/60">Select</th>
