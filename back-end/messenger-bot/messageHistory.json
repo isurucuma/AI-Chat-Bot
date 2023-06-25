@@ -1,0 +1,31 @@
+[
+    {
+        "userId": "6280943538608288",
+        "chatHistory": [
+            {
+                "isFromUser": true,
+                "content": "hi"
+            },
+            {
+                "isFromUser": false,
+                "content": "Hello! How can I assist you with your insurance needs today? Please provide me with more information so I can better assist you."
+            },
+            {
+                "isFromUser": true,
+                "content": "i want to get insurance"
+            },
+            {
+                "isFromUser": false,
+                "content": "As an insurance bot, I am equipped to provide information and assistance on various types of insurance, including auto, home, life, and health insurance. If you have a specific type of insurance you are interested in, please let me know and I will do my best to assist you."
+            },
+            {
+                "isFromUser": true,
+                "content": "home"
+            },
+            {
+                "isFromUser": false,
+                "content": "Our home insurance provides protection for homeowners, renters, and landlords, safeguarding against property damage, theft, and liability. It includes dwelling coverage to protect your home's structure from covered perils, personal property coverage to cover your belongings against loss or damage, liability coverage to provide financial protection if someone is injured on your property and you are found responsible, and additional living expenses coverage to help with temporary housing and other expenses if your home becomes uninhabitable due to a covered event."
+            }
+        ]
+    }
+]
