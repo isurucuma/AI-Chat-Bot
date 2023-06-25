@@ -3,21 +3,33 @@ import React, { useEffect, useState } from "react";
 type Props = {};
 
 function ActivityPageContainer({}: Props) {
-  const [botManualControl, setBotManualControl] = useState(false);
-  const handleBotControlToggle = () => {
+  const [botManualControl, setBotManualControl] = useState(true);
+  const handleBotControlToggle = async () => {
     // send a response to update the bot control mode
     // get the result and set the bot control mode
     // don't update the control mode if the response is not successful
+    const response = await fetch("http://localhost:3005/changesystemstate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        systemState: botManualControl ? 1 : 0,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
     setBotManualControl(!botManualControl); // TODO: remove this toggle manual control
   };
 
   useEffect(() => {
     // Load bot control mode before rendering
-    // fetch("http://localhost:3002/getBotControlMode")
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     setBotManualControl(data.data);
-    //   });
+    fetch("http://localhost:3005/getsystemstate")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.systemState);
+        setBotManualControl(data.systemState === 1 ? true : false);
+      });
   }, []);
 
   return (
@@ -29,7 +41,7 @@ function ActivityPageContainer({}: Props) {
         <label className="relative inline-flex items-center cursor-pointer">
           <input
             type="checkbox"
-            value=""
+            value={botManualControl ? 1 : 0}
             className="sr-only peer"
             onClick={handleBotControlToggle}
           />
