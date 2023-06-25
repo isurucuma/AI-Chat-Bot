@@ -8,11 +8,9 @@ function createConfigFile() {
 }
 
 function createEnvFile() {
-  const env = {
-    PAGE_ACCESS_TOKEN: '',
-    VERIFY_TOKEN: ''
-  };
-  fs.writeFileSync('.env', JSON.stringify(env));
+  const env = `PAGE_ACCESS_TOKEN=temp
+  VERIFY_TOKEN=abcd1111`;
+  fs.writeFileSync('.env', env);
 }
 
 function createFilesIfNotExist() {
@@ -32,11 +30,12 @@ function changeSystemState(systemState) {
 }
 
 function changeToken(PAGE_ACCESS_TOKEN, VERIFY_TOKEN) {
-  createFilesIfNotExist();
-  const config = JSON.parse(fs.readFileSync('.env'));
-  config.PAGE_ACCESS_TOKEN = PAGE_ACCESS_TOKEN;
-  config.VERIFY_TOKEN = VERIFY_TOKEN;
-  fs.writeFileSync('.env', JSON.stringify(config));
+  createFilesIfNotExist()
+  // update .env file with new tokens
+  const env = fs.readFileSync('.env', 'utf8').split('\n');
+  env[0] = `PAGE_ACCESS_TOKEN=${PAGE_ACCESS_TOKEN}`;
+  env[1] = `VERIFY_TOKEN=${VERIFY_TOKEN}`;
+  fs.writeFileSync('.env', env.join('\n'));
 }
 
 function getSystemState() {
@@ -45,9 +44,19 @@ function getSystemState() {
   return config.systemState;
 }
 
+
 function getToken() {
   createFilesIfNotExist();
-  const config = JSON.parse(fs.readFileSync('.env'));
+  const env = fs.readFileSync('.env', 'utf8').split('\n');
+  const config = {};
+  console.log(env)
+  // remove if /r have
+  env.forEach(line => {
+    const [key, value] = line.split('=');
+    config[key.trim()] = value.trim();
+  });
+
+  console.log(config)
   return { PAGE_ACCESS_TOKEN: config.PAGE_ACCESS_TOKEN, VERIFY_TOKEN: config.VERIFY_TOKEN };
 }
 
